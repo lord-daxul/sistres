@@ -1,0 +1,173 @@
+body{
+	font-family:"Trebuchet MS", Arial, sans-serif;
+	font-size:11px;
+	color:#333;
+	text-align: center;
+}
+
+a:link {
+	color: #718ABE;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #718ABE;
+}
+a:hover {
+	text-decoration: underline;
+	color: #718ABE;
+}
+a:active {
+	text-decoration: none;
+	color: #718ABE;	
+}
+
+/* Border Color / Style */
+INPUT {
+	border: 1px solid #D4E0EE;
+/*	width: 230px;
+*/	height:15px;	
+	font-family:"Trebuchet MS", Arial, sans-serif;
+	font-size:11px;
+	color:#333;
+}
+
+select{
+	border: 1px solid #D4E0EE;
+
+	font-family:"Trebuchet MS", Arial, sans-serif;
+	font-size:11px;
+	color:#333;
+}
+
+INPUT[type="submit"]	{
+font-size:10px;
+font-family:"Trebuchet MS", Arial, sans-serif;
+font-weight:bold;
+color:#4F76A3;
+background: #D4E0EE;
+border:1px solid #D4E0EE;
+width:80px;
+height:19px;
+}
+
+/* 
+	Cusco Sky table styles
+	written by Braulio Soncco http://www.buayacorp.com
+*/
+
+#table,.cdiseno th,.cdiseno td {
+	border: 1px solid #D4E0EE;
+	border-collapse: collapse;
+	font-family: "Trebuchet MS", Arial, sans-serif;
+	color: #555;
+	background:#FFF;
+}
+
+/*caption {
+	font-size: 150%;
+	font-weight: bold;
+	margin: 5px;
+}*/
+
+td, th {
+	padding: 4px;
+}
+
+thead th {
+	text-align: center;
+	background: #E6EDF5;
+	color: #4F76A3;
+	font-size: 100% !important;
+}
+
+tbody th {
+	font-weight: bold;
+}
+
+tbody tr { background: #FCFDFE; }
+
+tbody tr.odd { background: #F7F9FC; }
+
+table a:link {
+	color: #718ABE;
+	text-decoration: none;
+}
+
+table a:visited {
+	color: #718ABE;
+	text-decoration: none;
+}
+
+table a:hover {
+	color: #718ABE;
+	text-decoration: underline !important;
+}
+
+tfoot th, tfoot td {
+	font-size: 85%;
+}
+
+
+
+input.vanadium-invalid, select.vanadium-invalid, textarea.vanadium-invalid {
+  border-color: red !important;
+  border-style: solid !important;
+}
+
+input.vanadium-valid, select.vanadium-valid, textarea.vanadium-valid {
+  border-color: #0F0 !important;
+  border-style: solid !important;
+}
+
+.vanadium-message-value {
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.vanadium-advice {
+  font-size: 13px;
+}
+
+.vanadium-advice.vanadium-invalid, .vanadium-advice.vanadium-invalid * {
+  color: red;
+}
+
+input.vanadium-valid {
+/*  background-color: greenyellow;
+*/}
+
+input.vanadium-valid ~ .vanadium-valid-advice {
+  display: inline !important;
+  color: green;
+}
+
+.container {
+  border-color: #00F;
+  border-style: solid;
+  border-width: 2px;
+  margin: 3px;
+  padding: 2px;
+  width: auto;
+}
+
+.container.vanadium-valid {
+  border-color: #0F0 !important;
+}
+
+.container.vanadium-invalid {
+  border-color: #F00 !important;
+}
+
+
+
+table.tabla2 {
+ border-color: #69C;
+ border: 1px;
+}
+
+.borde-celda {
+	border: 1px solid #CCC ;
+	border-collapse:collapse;
+	
+}

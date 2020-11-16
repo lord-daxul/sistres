@@ -1,0 +1,16 @@
+<?
+include ("../encabezado.php");
+?>
+<html><body>
+<h1>&nbsp;</h1>
+<form action="crea_usuarios.php" method="POST">
+  Login(nick): <input type="text" name="login"><br>
+Password: <input type="password" name="pass1"><br>
+Repite Password: <input type="password" name="pass2"><br>
+Nombre: <input type="text" name="nombre"><br>
+Apellido Paterno: <input type="text" name="apaterno"><br>
+Apellido Materno: <input type="text" name="amaterno"><br>
+E-mail: <input type="text" name="email"><br>
+<input type="submit" name="Crear">
+</form>
+</body></html>

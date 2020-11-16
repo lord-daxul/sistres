@@ -8,7 +8,7 @@
 
 require_once('../class.phpmailer.php');
 
-$mail             = new PHPMailer(); // defaults to using php "mail()"
+$mail             = new PHPMailer(); // defaults to using"mail()"
 
 $mail->IsSendmail(); // telling the class to use SendMail transport
 

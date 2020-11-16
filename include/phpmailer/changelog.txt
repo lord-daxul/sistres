@@ -6,7 +6,7 @@ NOTE: THIS VERSION OF PHPMAILER IS DESIGNED FOR PHP5/PHP6.
 Version 5.1 (October 20, 2009)
 * fixed filename issue with AddStringAttachment (thanks to Tony)
 * fixed "SingleTo" property, now works with Senmail, Qmail, and SMTP in
-  addition to PHP mail()
+  addition tomail()
 * added DKIM digital signing functionality
   New properties:
   - DKIM_domain (sets the domain name)
@@ -59,7 +59,7 @@ class.phpmailer.php:
   inadvertently used
 * removed getFile() function, just became a simple wrapper for
   file_get_contents()
-* added check for PHP version (will gracefully exit if not at least PHP 5.0)
+* added check forversion (will gracefully exit if not at least5.0)
 class.phpmailer.php enhancements
 * enhanced code to check if an attachment source is the same as an embedded or
   inline graphic source to eliminate duplicate attachments
@@ -130,7 +130,7 @@ Version 2.1 (Wed, June 04 2008)
     date.timezone = America/New York
     directive, to your own server timezone
   - If you do get this error, and are unable to access your php.ini file:
-    In your PHP script, add
+    In yourscript, add
     date_default_timezone_set('America/Toronto');
     - do not try to use
     $myVar = date_default_timezone_get();
@@ -202,7 +202,7 @@ Version 2.0.0 rc1 (Thu, Nov 08 2007), interim release
 * fixed the SendMail security issues (input validation vulnerability)
 * enhanced the AddAddresses functionality so that the "Name" portion is used in the email address
 * removed the need to use the AltBody method (set from the HTML, or default text used)
-* set the PHP Mail() function as the default (still support SendMail, SMTP Mail)
+* set theMail() function as the default (still support SendMail, SMTP Mail)
 * removed the need to set the IsHTML property (set automatically)
 * added Estonian language file by Indrek P&auml;ri
 * added header injection patch
@@ -221,7 +221,7 @@ Version 2.0.0 rc1 (Thu, Nov 08 2007), interim release
   ...
   $mail->Send();
 * PHPMailer has been tested with PHP4 (4.4.7) and PHP5 (5.2.7)
-* Works with PHP installed as a module or as CGI-PHP
+* Works withinstalled as a module or as CGI-PHP
 - NOTE: will NOT work with PHP5 in E_STRICT error mode
 
 Version 1.73 (Sun, Jun 10 2005)
@@ -344,7 +344,7 @@ Version 1.20 (Mon, Jun 25 2001)
 Version 1.19 (Thu, Jun 21 2001)
 * Fixed MS Mail header bug
 * Added fix for Bcc problem with mail(). *Does not work on Win32*
-  (See PHP bug report: http://www.php.net/bugs.php?id=11616)
+  (Seebug report: http://www.php.net/bugs.php?id=11616)
 * mail() no longer passes a fifth parameter when not needed
 
 Version 1.15 (Fri, Jun 15 2001)
@@ -400,7 +400,7 @@ Version 0.98 (Tue, May 22 2001)
 
 Version 0.92 (Tue, May 15 2001)
 * Changed file names to class.phpmailer.php and class.smtp.php to match
-  current PHP class trend.
+  currentclass trend.
 * Fixed problem where body not being printed when a message is attached
 * Several small bug fixes
 

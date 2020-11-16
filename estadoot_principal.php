@@ -1,4 +1,4 @@
-<?
+<?php 
 ob_start();
 $accion=$_GET['accion'];
 $id=$_GET['id'];
@@ -105,7 +105,7 @@ $(document).ready(function() {
 </script> 
 -->
 
-<? include_once('include/js_editor.php'); ?> 
+<?php  include_once('include/js_editor.php'); ?> 
 
 
 </head>
@@ -114,7 +114,7 @@ $(document).ready(function() {
 <body>
 
 
-<? if ($accion == 'editar') 
+<?php  if ($accion == 'editar') 
 	{ 
 		$id=$_GET['id'];
 		$consulta = mysql_query("SELECT * FROM estadosot WHERE idestadoots='$id'", $link) or die(mysql_error());
@@ -128,7 +128,7 @@ $(document).ready(function() {
 <tbody>
   <tr>
     <td width="21%" align="left">Estado de gesti&oacute;n</td>
-    <td width="79%" align="left"><input name="nombreestadoot" type="text" class="validate[required]" id="nombreestadoot" value="<? echo $fila['nombreestadoots']; ?>" size="100"></td>
+    <td width="79%" align="left"><input name="nombreestadoot" type="text" class="validate[required]" id="nombreestadoot" value="<?php  echo $fila['nombreestadoots']; ?>" size="100"></td>
     </tr>
   </tbody>
   </table>
@@ -138,12 +138,12 @@ $(document).ready(function() {
     </p>
     <p>
       <input type="hidden" name="MM_insert" value="form1">
-      <input type="hidden" name="accionform" value="<? echo $accion ?>">
-      <input type="hidden" name="id" value="<? echo $id ?>">
+      <input type="hidden" name="accionform" value="<?php  echo $accion ?>">
+      <input type="hidden" name="id" value="<?php  echo $id ?>">
 
 
   </p>
 </form>
 </body>
 </html>
-<? } ?>
+<?php  } ?>

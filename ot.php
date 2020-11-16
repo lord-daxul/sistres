@@ -1,4 +1,4 @@
-<?
+<?php 
 $accion=$_GET['accion'];
 $id=$_GET['id'];
 $idempresa=$_GET['idempresa'];
@@ -16,15 +16,15 @@ $us=$_GET['us'];
 
 <body>
 <ul id="countrytabs" class="shadetabs">
-<li><a href="ot_principal.php?accion=<? echo $accion; ?>&id=<? echo $id; ?>&us=<? echo $us; ?>" rel="#iframe" class="selected">Órden de Trabajo</a></li>
-<? if ($accion == "editar")
+<li><a href="ot_principal.php?accion=<?php  echo $accion; ?>&id=<?php  echo $id; ?>&us=<?php  echo $us; ?>" rel="#iframe" class="selected">Orden de Trabajo</a></li>
+<?php  if ($accion == "editar")
 { ?>
 
-<li><a href="ot_documentos1.php?accion=<? echo $accion; ?>&amp;id=<? echo $id; ?>&us=<? echo $us; ?>" rel="#iframe" class="selected">Documentos</a></li>
+<li><a href="ot_documentos1.php?accion=<?php  echo $accion; ?>&amp;id=<?php  echo $id; ?>&us=<?php  echo $us; ?>" rel="#iframe" class="selected">Documentos</a></li>
 <!--
-<li><a href="permiso_respuestas.php?accion=<? echo $accion; ?>&amp;id=<? echo $id; ?>" rel="#iframe" class="selected">Respuestas</a></li>
+<li><a href="permiso_respuestas.php?accion=<?php  echo $accion; ?>&amp;id=<?php  echo $id; ?>" rel="#iframe" class="selected">Respuestas</a></li>
 -->
-<? } ?>
+<?php  } ?>
 </ul>
 
 <div id="countrydivcontainer" style="border:1px solid gray; width:600; height:600; margin-bottom: 1em; padding: 10px">

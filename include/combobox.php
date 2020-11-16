@@ -1,10 +1,10 @@
-      <?php
+      <?php 
 	  
    			$accion=$_GET['accion'];
 
 		?>
             <option value='' selected>-- Seleccione --</option>
-			<?
+			<?php 
          	      	
          for($i=0; $i<count($datos); $i++)
          {

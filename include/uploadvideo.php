@@ -1,4 +1,4 @@
-  <?
+  <?php 
   
    /*
    Video Upload and thumbnail generator with ffmpeg. This code is written by John Anderson of Vermont Internet Design. For support please contact chillininvt@yahoo.com. I provide support at the rate of $50 per hr.

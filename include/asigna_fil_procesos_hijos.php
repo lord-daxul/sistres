@@ -1,4 +1,4 @@
-<?
+<?php 
 include ("config.php");
 
 $txt_procesos = "SELECT * from procesos WHERE idactpadre_proc = 0 AND esprocpadre = 1";

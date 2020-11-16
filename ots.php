@@ -1,4 +1,4 @@
-<? 
+<?php  
  include "include/paginacion.php"; 
 
  $idusuario = $_SESSION["idusuario"];
@@ -20,7 +20,7 @@ else
  
 <script language="JavaScript">
 function confirmar(url){
-if (!confirm("¿Está seguro de que desea eliminar el registro?")) {
+if (!confirm("ï¿½Estï¿½ seguro de que desea eliminar el registro?")) {
 return false;
 }
 else {
@@ -32,19 +32,19 @@ return true;
 <!--
 <div align="right"><a href='logout.php'>Cerrar sesi&oacute;n</a>&nbsp;&nbsp;&nbsp;</div>
 -->
-<?
+<?php 
 if ($_SESSION["tipousuario"] == 0)
 { ?>
 
 <br />
 
-<a href="ot.php?accion=agregar&us=<? echo $idusuario; ?>" title="Agregar" rel="gb_page_fs[]">Agregar nuevo</a>
+<a href="ot.php?accion=agregar&us=<?php  echo $idusuario; ?>" title="Agregar" rel="gb_page_fs[]">Agregar nuevo</a>
 
 <br />
 <br />
 
 
-<?
+<?php 
 } ?>
 
 
@@ -59,26 +59,26 @@ if ($_SESSION["tipousuario"] == 0)
 		</tr>
 	</thead>
 	<tbody>
-		<? while ($row = mysql_fetch_array($result)){ ?>
+		<?php  while ($row = mysql_fetch_array($result)){ ?>
 		<tr>
-		  <td align="center"><a href="ot.php?id=<? echo $row['idot']; ?>&accion=editar&us=<? echo $idusuario; ?>" rel="gb_page_fs[]" title="Órden de Trabajo Nro. <? echo $row['idot']; ?>"><? echo $row['idot']; ?></a></td>
-          <td align="center"><? echo $row['nombreempresa']; ?></td>
-		  <td align="center"><? echo $row['login']; ?></td>
-          <td align="center"><? echo fecha_normal($row['fechacreacionot']); ?></td>
+		  <td align="center"><a href="ot.php?id=<?php  echo $row['idot']; ?>&accion=editar&us=<?php  echo $idusuario; ?>" rel="gb_page_fs[]" title="Orden de Trabajo Nro<?php  echo $row['idot']; ?><?php echo $row['idot']; ?></a></td>
+          <td align="center"><?php  echo $row['nombreempresa']; ?></td>
+		  <td align="center"><?php  echo $row['login']; ?></td>
+          <td align="center"><?php  echo fecha_normal($row['fechacreacionot']); ?></td>
           <td align="center">
-          <a href="ot.php?id=<? echo $row['idot']; ?>&accion=editar&us=<? echo $idusuario; ?>" rel="gb_page_fs[]" title="Órden de Trabajo Nro. <? echo $row['idot']; ?>">Editar</a> &nbsp;
+          <a href="ot.php?id=<?php  echo $row['idot']; ?>&accion=editar&us=<?php  echo $idusuario; ?>" rel="gb_page_fs[]" title="Orden de Trabajo Nro<?php  echo $row['idot']; ?>">Editar</a> &nbsp;
 <!--
-          <a href="javascript:;" onclick="confirmar('ot_principal.php?id=<? echo $row['idot']; ?>&accion=eliminar&url=<? echo $_SERVER['REQUEST_URI'] ?>'); return false;">Eliminar</a>
+          <a href="javascript:;" onclick="confirmar('ot_principal.php?id=<?php  echo $row['idot']; ?>&accion=eliminar&url=<?php  echo $_SERVER['REQUEST_URI'] ?>'); return false;">Eliminar</a>
 -->
           </td>
 		</tr>
-		<? } ?>
+		<?php  } ?>
 
         
 	</tbody>
 </table>
 <div align="center">
-<? 
+<?php  
 include "include/muestra_paginacion.php"; 
  
 
@@ -93,7 +93,7 @@ echo " <a href='" . $_SERVER['REQUEST_URI'] . "&filtro=0'> Ocultar filtro</a>"; 
 	});
 </script>
 
-<? } else {
+<?php  } else {
 	
 	echo " <a href='" . $_SERVER['REQUEST_URI'] . "&filtro=1'> Mostrar filtro</a>";
 

@@ -1,6 +1,6 @@
 <?php
 /**
-* PHPMailer - PHP email transport unit tests
+* PHPMailer -email transport unit tests
 * Before running these tests you need to install PHPUnit 3.3 or later through pear, like this:
 *   pear install "channel://pear.phpunit.de/PHPUnit"
 * Then run the tests like this:
@@ -21,7 +21,7 @@ require $INCLUDE_DIR . 'class.phpmailer.php';
 error_reporting(E_ALL);
 
 /**
-* PHPMailer - PHP email transport unit test class
+* PHPMailer -email transport unit test class
 * Performs authentication tests
 */
 class phpmailerTest extends PHPUnit_Framework_TestCase {
@@ -357,7 +357,7 @@ class phpmailerTest extends PHPUnit_Framework_TestCase {
 	//Check that a quoted printable encode and decode results in the same as went in
 	$t = substr(file_get_contents(__FILE__), 0, 1024); //Just pick a chunk of this file as test content
 	$this->assertEquals($t, quoted_printable_decode($this->Mail->EncodeQP($t)), 'QP encoding round-trip failed');
-        //$this->assertEquals($t, quoted_printable_decode($this->Mail->EncodeQPphp($t)), 'Native PHP QP encoding round-trip failed'); //TODO the PHP qp encoder is quite broken
+        //$this->assertEquals($t, quoted_printable_decode($this->Mail->EncodeQPphp($t)), 'NativeQP encoding round-trip failed'); //TODO theqp encoder is quite broken
 
     }
 
@@ -607,9 +607,9 @@ class phpmailerTest extends PHPUnit_Framework_TestCase {
 	*/
 	function test_Encodings() {
 	    $this->Mail->Charset = 'iso-8859-1';
-	    $this->assertEquals('=A1Hola!_Se=F1or!', $this->Mail->EncodeQ('¡Hola! Señor!', 'text'), 'Q Encoding (text) failed');
-	    $this->assertEquals('=A1Hola!_Se=F1or!', $this->Mail->EncodeQ('¡Hola! Señor!', 'comment'), 'Q Encoding (comment) failed');
-	    $this->assertEquals('=A1Hola!_Se=F1or!', $this->Mail->EncodeQ('¡Hola! Señor!', 'phrase'), 'Q Encoding (phrase) failed');
+	    $this->assertEquals('=A1Hola!_Se=F1or!', $this->Mail->EncodeQ('ï¿½Hola! Seï¿½or!', 'text'), 'Q Encoding (text) failed');
+	    $this->assertEquals('=A1Hola!_Se=F1or!', $this->Mail->EncodeQ('ï¿½Hola! Seï¿½or!', 'comment'), 'Q Encoding (comment) failed');
+	    $this->assertEquals('=A1Hola!_Se=F1or!', $this->Mail->EncodeQ('ï¿½Hola! Seï¿½or!', 'phrase'), 'Q Encoding (phrase) failed');
 	}
 	
 	/**
@@ -652,13 +652,13 @@ By entering a SMTP hostname it will automatically perform tests with SMTP.
 
 <form name="phpmailer_unit" action=__FILE__ method="get">
 <input type="hidden" name="submitted" value="1"/>
-From Address: <input type="text" size="50" name="mail_from" value="<?php echo get("mail_from"); ?>"/>
+From Address: <input type="text" size="50" name="mail_from" value="<?phpecho get("mail_from"); ?>"/>
 <br/>
-To Address: <input type="text" size="50" name="mail_to" value="<?php echo get("mail_to"); ?>"/>
+To Address: <input type="text" size="50" name="mail_to" value="<?phpecho get("mail_to"); ?>"/>
 <br/>
-Cc Address: <input type="text" size="50" name="mail_cc" value="<?php echo get("mail_cc"); ?>"/>
+Cc Address: <input type="text" size="50" name="mail_cc" value="<?phpecho get("mail_cc"); ?>"/>
 <br/>
-SMTP Hostname: <input type="text" size="50" name="mail_host" value="<?php echo get("mail_host"); ?>"/>
+SMTP Hostname: <input type="text" size="50" name="mail_host" value="<?phpecho get("mail_host"); ?>"/>
 <p/>
 <input type="submit" value="Run Test"/>
 

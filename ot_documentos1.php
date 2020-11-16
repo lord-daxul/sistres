@@ -1,4 +1,4 @@
-<?
+<?php 
 include("include/config.php");
 include("include/conv_fecha.php");
 $accion=$_GET['accion'];
@@ -158,17 +158,17 @@ $(document).ready(function() {
 <br>
 
 
-  <? //include "articulo_principal.php" ?>
+  <?php  //include "articulo_principal.php" ?>
     <p>
       <input type="hidden" name="MM_insert" value="form1">
-      <input type="hidden" name="accionform" value="<? echo $accion ?>">
-      <input type="hidden" name="id" value="<? echo $id ?>">
-      <input type="hidden" name="idempresaobligacion" value="<? echo $idempresaobligacion ?>">
+      <input type="hidden" name="accionform" value="<?php  echo $accion ?>">
+      <input type="hidden" name="id" value="<?php  echo $id ?>">
+      <input type="hidden" name="idempresaobligacion" value="<?php  echo $idempresaobligacion ?>">
 
 
   </p>
     <p>
-      <? 
+      <?php  
  //include "include/paginacion.php"; 
  $consulta = "SELECT * FROM otsdocumentos AS a, estadosot AS b, estadosdist as c WHERE a.idestadodist =c.idestadodist AND a.idestadoot = b.idestadoots AND idot = $id";
  //echo $consulta;
@@ -194,7 +194,7 @@ return true;
       </script>
     </p>
     
-    <?
+    <?php 
 
 		$consulta_usuario = mysql_query("SELECT * FROM usuarios WHERE id='$idusuario'", $link) or die(mysql_error());
 		$fila_usuario = mysql_fetch_assoc($consulta_usuario);
@@ -206,9 +206,9 @@ if ($fila_usuario["tipousuario"] == 0)
 
 ?>
     
-    <a href="ot_documento1_principal.php?accion=agregar&idot=<? echo $id ?>&us=<? echo $idusuario; ?>" title="Agregar" rel="gb_page_fs[]">Agregar nuevo</a><br /><br />
+    <a href="ot_documento1_principal.php?accion=agregar&idot=<?php  echo $id ?>&us=<?php  echo $idusuario; ?>" title="Agregar" rel="gb_page_fs[]">Agregar nuevo</a><br /><br />
  
-<? } ?>
+<?php  } ?>
     
     <table align="center" class="tabla" id="tabla2">
       <thead>
@@ -224,26 +224,26 @@ if ($fila_usuario["tipousuario"] == 0)
         </tr>
       </thead>
       <tbody>
-        <? while ($row = mysql_fetch_array($result)){ ?>
+        <?php  while ($row = mysql_fetch_array($result)){ ?>
         <tr>
-          <td align="center"><? echo $row['nombreestadoots']; ?></td>
-          <td align="center"><? echo $row['nombreestadodist']; ?></td>
-          <td align="center"><? if ($row['rutdocot'] == 0) {} else {echo formato_rut($row['rutdocot']);} ?></td>
-          <td align="center"><? echo $row['facturadocot']; ?></td>
+          <td align="center"><?php  echo $row['nombreestadoots']; ?></td>
+          <td align="center"><?php  echo $row['nombreestadodist']; ?></td>
+          <td align="center"><?php  if ($row['rutdocot'] == 0) {} else {echo formato_rut($row['rutdocot']);} ?></td>
+          <td align="center"><?php  echo $row['facturadocot']; ?></td>
           <td align="center">
-           <a href="archivos/<? echo $row['urldocumento']; ?>" target="_blank"> <? echo $row['urldocumento']; ?> </a>
+           <a href="archivos/<?php  echo $row['urldocumento']; ?>" target="_blank"> <?php  echo $row['urldocumento']; ?> </a>
           </td>
           <td align="center">
           
-<a href="ot_documento1_principal.php?id=<? echo $row['iddocot']; ?>&accion=editar&us=<? echo $idusuario; ?>" rel="gb_page_fs[]">Editar</a>
+<a href="ot_documento1_principal.php?id=<?php  echo $row['iddocot']; ?>&accion=editar&us=<?php  echo $idusuario; ?>" rel="gb_page_fs[]">Editar</a>
 <!--
-<a href="javascript:;" onclick="confirmar('ot_documento1_principal.php?id=<? echo $row['idot']; ?>&urldocumentoeliminar=<? echo $row['urldocumento']; ?>&id=<? echo $id; ?>&accion=eliminar&url=<? echo $_SERVER['REQUEST_URI'] ?>'); return false;">Eliminar</a>
+<a href="javascript:;" onclick="confirmar('ot_documento1_principal.php?id=<?php  echo $row['idot']; ?>&urldocumentoeliminar=<?php  echo $row['urldocumento']; ?>&id=<?php  echo $id; ?>&accion=eliminar&url=<?php  echo $_SERVER['REQUEST_URI'] ?>'); return false;">Eliminar</a>
 -->          
           
           
           </td>
         </tr>
-        <? } ?>
+        <?php  } ?>
       </tbody>
     </table>
 <script>	
@@ -254,4 +254,4 @@ if ($fila_usuario["tipousuario"] == 0)
 </div>
 </body>
 </html>
-<? } ?>
+<?php  } ?>

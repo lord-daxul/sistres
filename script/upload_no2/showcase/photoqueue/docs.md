@@ -3,7 +3,7 @@ selectable file-types are limited to images. Check the showcase JavaScript shown
 
 ### What happens?
 
-The PHP script does not save the files but [logs](../script.log) every request. Check the Firebug console for event debugging logs.
+Thescript does not save the files but [logs](../script.log) every request. Check the Firebug console for event debugging logs.
 
 1. Select one or more images.
 2. The images are uploaded one by one, overall progress and file progress is updated.

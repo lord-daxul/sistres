@@ -1,4 +1,4 @@
-<?php
+<?php 
 ini_set('mysql.trace_mode', 0); 
 session_start();
 if(!isset($_SESSION["login"])){
@@ -87,10 +87,10 @@ body {
 </style></head>
 
 <body>
-<?php
+<?php 
 
 
-session_start();
+//session_start();
 if(!isset($_SESSION["login"])){
 echo 'P';
 } else { ?>
@@ -99,20 +99,20 @@ echo 'P';
 <ul id='nav'>
 
   <li><a href='index.php?p=inicio'>Inicio</a></li>
-<?php if ($_SESSION["tipousuario"] == 2)
+<?phpif ($_SESSION["tipousuario"] == 2)
       { ?>
   <li><a href='#'>Administraci&oacute;n</a>
     <ul>
       <li><a href='index.php?p=usuarios'>Usuarios</a> </li>
       <li><a href='index.php?p=empresas'>Empresas</a></li>
-      <li><a href='index.php?p=estadosots'>Estados de Gesti�n</a></li>
-      <li><a href='index.php?p=estadosdists'>Estados de Distribuci�n</a></li>
+      <li><a href='index.php?p=estadosots'>Estados de Gestión</a></li>
+      <li><a href='index.php?p=estadosdists'>Estados de Distribución</a></li>
     </ul>
     </li>
 
-<?php } ?>
+<?php  } ?>
 
-  <li><a href='index.php?p=ots'>�rdenes de Trabajo</a>
+  <li><a href='index.php?p=ots'>Ordenes de Trabajo</a>
 
     </li>
 
@@ -126,8 +126,8 @@ echo 'P';
 </div>
 
 
-<? } ?><br />
-<?php 
+<?php  } ?><br />
+<?php  
   $pagina=$_GET['p'];	
 	if (!$pagina) { $pagina="login"; }
 	$archivo=$pagina.".php";
@@ -139,13 +139,13 @@ echo 'P';
       <p align="center">&nbsp;</p>
       <p align="center">La p&aacute;gina solicitada no est&aacute; disponible</p>
 <p>
-<?php 
+<?php  
        }
    }
-  }
-}
+  
 
-//mysql_close($link); //cierra la conexion 
+
+mysql_close($link); 
 ?>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<?
+<?php 
 ob_start();
 include ("include/config.php");
 include ("include/conv_fecha.php");
@@ -185,7 +185,7 @@ $(document).ready(function() {
 	</script>
 
 
-<? include_once('include/js_editor.php'); ?>
+<?php  include_once('include/js_editor.php'); ?>
 
 
 
@@ -315,7 +315,7 @@ function bytesToSize(bytes) {
 
 <br>
 
-<? if ($accion == 'editar') 
+<?php  if ($accion == 'editar') 
 	{ 
 		$id=$_GET['id'];
 		$consulta = mysql_query("SELECT * FROM otsdocumentos WHERE iddocumentoot='$id'", $link) or die(mysql_error());
@@ -333,11 +333,11 @@ function bytesToSize(bytes) {
 
     <tr>
     <td align="left">Nombre documento</td>
-    <td align="left"><input type="text" name="nombredocumentoot" class="validate[required]" id="nombredocumentoot" value="<? echo $fila['nombredocumentoot']; ?>"     /></td>
+    <td align="left"><input type="text" name="nombredocumentoot" class="validate[required]" id="nombredocumentoot" value="<?php  echo $fila['nombredocumentoot']; ?>"     /></td>
     </tr>
     <tr>
     </tr>
-    <? if ($accion <> 'editar') 
+    <?php  if ($accion <> 'editar') 
 	{  ?>
     <td align="left">Archivo </td>
     <td align="left"><!--<input type="hidden" name="MAX_FILE_SIZE" value="1000000000" />-->
@@ -352,14 +352,14 @@ function bytesToSize(bytes) {
       <br />
       <!--<input type="submit" value="Enviar">-->
     
-    <? }
+    <?php  }
     else
     {
      ?> 
      
      <td align="left">Archivo </td>
-<td align="left">       <a href="../archivos/<? echo $fila['urldocumentoot']; ?>" target="_blank"> <? echo $fila['urldocumentoot']; ?> </a> </td>
-  <?  }
+<td align="left">       <a href="../archivos/<?php  echo $fila['urldocumentoot']; ?>" target="_blank"> <?php  echo $fila['urldocumentoot']; ?> </a> </td>
+  <?php   }
     
      ?>
      </tr>
@@ -372,19 +372,19 @@ function bytesToSize(bytes) {
   <p>&nbsp;</p>
     <p>
       <input type="hidden" name="MM_insert" value="form1">
-      <input type="hidden" name="accionform" value="<? echo $accion ?>">
-              <? $idot = $_GET['idot']; 
+      <input type="hidden" name="accionform" value="<?php  echo $accion ?>">
+              <?php  $idot = $_GET['idot']; 
               //echo "topico". $idot?>
-      <input type="hidden" name="idot" value="<? echo $idot ?>">
-      <input type="hidden" name="id" value="<? echo $id ?>">
+      <input type="hidden" name="idot" value="<?php  echo $idot ?>">
+      <input type="hidden" name="id" value="<?php  echo $id ?>">
 
 
-      <input type="hidden" name="idempresanorma" value="<? echo $idempresanorma ?>">
+      <input type="hidden" name="idempresanorma" value="<?php  echo $idempresanorma ?>">
 
 
   </p>
     <p>
-      <?
+      <?php 
     include "include/paginacion.php";
     $consulta = "SELECT * FROM versionesproyectos WHERE idproyecto = $id ORDER BY fecha";
     //include "include/genera_consulta.php"; ?>
@@ -406,4 +406,4 @@ return true;
 </div>
 </body>
 </html>
-<? } ?>
+<?php  } ?>

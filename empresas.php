@@ -1,4 +1,4 @@
-<? 
+<?php  
  include "include/paginacion.php"; 
  $consulta = "SELECT * FROM empresas ORDER BY idempresa";
  include "include/genera_consulta.php"; 
@@ -7,7 +7,7 @@
  
 <script language="JavaScript">
 function confirmar(url){
-if (!confirm("¿Está seguro de que desea eliminar el registro?")) {
+if (!confirm("ï¿½Estï¿½ seguro de que desea eliminar el registro?")) {
 return false;
 }
 else {
@@ -27,19 +27,19 @@ return true;
 		</tr>
 	</thead>
 	<tbody>
-		<? while ($row = mysql_fetch_array($result)){ ?>
+		<?php  while ($row = mysql_fetch_array($result)){ ?>
 		<tr>
-		  <td align="left"><? echo $row['nombreempresa']; ?></td>
-		  <td align="left"><? echo $row['rutempresa']; ?></td>
-          <td align="center"><a href="empresa.php?accion=editar&id=<? echo $row['idempresa']; ?>" rel="gb_page_fs[]">Editar</a> &nbsp;<a href="javascript:;" onclick="confirmar('empresa_principal.php?id=<? echo $row['idempresa']; ?>&accion=eliminar&url=<? echo $_SERVER['REQUEST_URI'] ?>'); return false;">Eliminar</a></td> 
+		  <td align="left"><?php  echo $row['nombreempresa']; ?></td>
+		  <td align="left"><?php  echo $row['rutempresa']; ?></td>
+          <td align="center"><a href="empresa.php?accion=editar&id=<?php  echo $row['idempresa']; ?>" rel="gb_page_fs[]">Editar</a> &nbsp;<a href="javascript:;" onclick="confirmar('empresa_principal.php?id=<?php  echo $row['idempresa']; ?>&accion=eliminar&url=<?php  echo $_SERVER['REQUEST_URI'] ?>'); return false;">Eliminar</a></td> 
 		</tr>
-		<? } ?>
+		<?php  } ?>
 
         
 	</tbody>
 </table>
 <div align="center">
-<? 
+<?php  
 include "include/muestra_paginacion.php"; 
  
 
@@ -54,7 +54,7 @@ echo " <a href='" . $_SERVER['REQUEST_URI'] . "&filtro=0'> Ocultar filtro</a>"; 
 	});
 </script>
 
-<? } else {
+<?php  } else {
 	
 	echo " <a href='" . $_SERVER['REQUEST_URI'] . "&filtro=1'> Mostrar filtro</a>";
 

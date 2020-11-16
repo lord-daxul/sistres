@@ -1,4 +1,4 @@
-<?
+<?php 
 ob_start();
 $accion=$_GET['accion'];
 $id=$_GET['id'];
@@ -105,7 +105,7 @@ $(document).ready(function() {
 </script> 
 -->
 
-<? include_once('include/js_editor.php'); ?> 
+<?php  include_once('include/js_editor.php'); ?> 
 
 
 </head>
@@ -114,7 +114,7 @@ $(document).ready(function() {
 <body>
 
 
-<? if ($accion == 'editar') 
+<?php  if ($accion == 'editar') 
 	{ 
 		$id=$_GET['id'];
 		$consulta = mysql_query("SELECT * FROM estadosdist WHERE idestadodist='$id'", $link) or die(mysql_error());
@@ -129,7 +129,7 @@ $(document).ready(function() {
 <tbody>
   <tr>
     <td width="21%" align="left">Estado de distribuc&oacute;n</td>
-    <td width="79%" align="left"><input name="nombreestadodist" type="text" class="validate[required]" id="nombreestadodist" value="<? echo $fila['nombreestadodist']; ?>" size="100"></td>
+    <td width="79%" align="left"><input name="nombreestadodist" type="text" class="validate[required]" id="nombreestadodist" value="<?php  echo $fila['nombreestadodist']; ?>" size="100"></td>
     </tr>
   </tbody>
   </table>
@@ -139,12 +139,12 @@ $(document).ready(function() {
     </p>
     <p>
       <input type="hidden" name="MM_insert" value="form1">
-      <input type="hidden" name="accionform" value="<? echo $accion ?>">
-      <input type="hidden" name="id" value="<? echo $id ?>">
+      <input type="hidden" name="accionform" value="<?php  echo $accion ?>">
+      <input type="hidden" name="id" value="<?php  echo $id ?>">
 
 
   </p>
 </form>
 </body>
 </html>
-<? } ?>
+<?php  } ?>

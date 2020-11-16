@@ -1,4 +1,4 @@
-<?
+<?php 
 $accion=$_GET['accion'];
 $id=$_GET['id'];
 $idempresa=$_GET['idempresa'];
@@ -15,11 +15,11 @@ $idempresa=$_GET['idempresa'];
 
 <body>
 <ul id="countrytabs" class="shadetabs">
-<li><a href="estadoot_principal.php?accion=<? echo $accion; ?>&id=<? echo $id; ?>" rel="#iframe" class="selected">Estado de Gestión</a></li>
-<? if ($accion == "editar")
+<li><a href="estadoot_principal.php?accion=<?php  echo $accion; ?>&id=<?php  echo $id; ?>" rel="#iframe" class="selected">Estado de Gestiï¿½n</a></li>
+<?php  if ($accion == "editar")
 { ?>
 
-<? } ?>
+<?php  } ?>
 </ul>
 
 <div id="countrydivcontainer" style="border:1px solid gray; width:600; height:600; margin-bottom: 1em; padding: 10px">

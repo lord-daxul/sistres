@@ -1,4 +1,4 @@
-<? 
+<?php  
  include "include/paginacion.php"; 
  
  $consulta = "SELECT Nombre,apaterno as 'Apellidos', login as 'Usuario' FROM usuarios";
@@ -13,12 +13,12 @@
 </thead>
 <tbody>
 <tr>
-<td> <? echo $row[0]; ?> </td>
+<td> <?php  echo $row[0]; ?> </td>
 </tr>
 </tbody>
 </table>
 
-<? 
+<?php  
  include "include/muestra_paginacion.php"; 
  
  echo " <a href='" . $_SERVER['REQUEST_URI'] . "&filtro=1'> Mostrar filtro</a>";
@@ -34,5 +34,5 @@ if ($filtro_tabla == 1) {  ?>
 	});
 </script>
 
-<? } ?>
+<?php  } ?>
  

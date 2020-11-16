@@ -1,4 +1,4 @@
-<?
+<?php 
 $nombre_db = "sistema_normas"; 
 $tablas = "SHOW TABLES"; 
 $tablas = mysql_db_query($nombre_db,$tablas,$link); 

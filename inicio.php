@@ -1,4 +1,4 @@
-<? session_start();
+<?php  session_start();
 if (!isset($_SESSION["login"]))
 {
     header("location:login.php");
@@ -20,7 +20,7 @@ body {
   <tr>
     <td width="4%">&nbsp;</td>
     <td width="83%" align="center"><h3><strong>SISTEMA DE DOCUMENTOS</strong></h3>
-    <p>Usuario: <strong><? echo $_SESSION["nombre"] . " " . $_SESSION["apaterno"] .
+    <p>Usuario: <strong><?php  echo $_SESSION["nombre"] . " " . $_SESSION["apaterno"] .
 " " . $_SESSION["amaterno"] ;
 ?></strong></p></td>
 <!--
@@ -50,13 +50,13 @@ body {
 
 <p><br />
   <br />
-<!--  <br>Ha ingresado con el usuario: <strong> <? echo $_SESSION["login"];
+<!--  <br>Ha ingresado con el usuario: <strong> <?php  echo $_SESSION["login"];
 ?>
 --></strong> </p>
 <p><br>
 
 
 </p>
-</body></html><? isset($_SESSION);
+</body></html><?php  isset($_SESSION);
 }
 ?>

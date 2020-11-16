@@ -1,4 +1,4 @@
-<?
+<?php 
 ob_start();
 include ("include/config.php");
 include ("include/conv_fecha.php");
@@ -92,11 +92,11 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
 
 
     echo '<link href="estilos.css" type="text/css" rel="stylesheet">'; ?><br /><br />
-    <a href="ot_documento1_principal.php?accion=agregar&idot=<? echo $idot ?>" title="Agregar" >Subir m&aacute;s documentos.</a><br /><br />
+    <a href="ot_documento1_principal.php?accion=agregar&idot=<?php  echo $idot ?>" title="Agregar" >Subir m&aacute;s documentos.</a><br /><br />
     
-    <a href="ot_documentos1.php?accion=<? echo $accion; ?>&amp;id=<? echo $idot; ?>&us=<? echo $_POST['idusuario']; ?>" title="Agregar" >Volver.</a>
+    <a href="ot_documentos1.php?accion=<?php  echo $accion; ?>&amp;id=<?php  echo $idot; ?>&us=<?php  echo $_POST['idusuario']; ?>" title="Agregar" >Volver.</a>
         
-<?
+<?php 
     }
 }
 //}
@@ -253,7 +253,7 @@ $("#content > ul").tabs();
 <link rel="stylesheet" href="script/wow-alert/css/wow-alert.css" type="text/css" media="screen" charset="utf-8" />
 
 
-<? include_once('include/js_editor.php'); 
+<?php  include_once('include/js_editor.php'); 
 
 function formato_rut( $rut ) {
     return number_format( substr ( $rut, 0 , -1 ) , 0, "", ".") . '-' . substr ( $rut, strlen($rut) -1 , 1 );
@@ -268,7 +268,7 @@ function formato_rut( $rut ) {
 
 <br>
 
-<? if ($accion == 'editar') 
+<?php  if ($accion == 'editar') 
 	{ 
 		$id=$_GET['id'];
 		$consulta = mysql_query("SELECT * FROM otsdocumentos WHERE iddocot='$id'", $link) or die(mysql_error());
@@ -288,12 +288,12 @@ function formato_rut( $rut ) {
 <!--
     <tr>
     <td align="left">Nombre documento</td>
-    <td align="left"><input type="text" name="nombredocumentoot" class="validate[required]" id="nombredocumentoot" value="<? echo $fila['nombredocumentoot']; ?>"     /></td>
+    <td align="left"><input type="text" name="nombredocumentoot" class="validate[required]" id="nombredocumentoot" value="<?php  echo $fila['nombredocumentoot']; ?>"     /></td>
     </tr>
     <tr>
 -->    
 
-<?
+<?php 
 
 		$consulta_usuario = mysql_query("SELECT * FROM usuarios WHERE id='$idusuario'", $link) or die(mysql_error());
 		$fila_usuario = mysql_fetch_assoc($consulta_usuario);
@@ -311,7 +311,7 @@ $sw_desact_etapa = "disabled";
  
   ?>
 
-<?
+<?php 
 if ($accion == 'editar' && $fila_usuario["tipousuario"] == 0)
 {
     $sw_desact_rut = "disabled";
@@ -320,18 +320,18 @@ if ($accion == 'editar' && $fila_usuario["tipousuario"] == 0)
 
     <tr>
     <td width="200" align="left">Rut</td>
-    <td width="79%" align="left"><input name="rutdocot" type="text"  class="" id="rutdocot" value="<? if ($fila['rutdocot'] == 0) {} else {echo formato_rut($fila['rutdocot']);} ?>" size="10" <? echo $sw_desact_rut ?>></td>
+    <td width="79%" align="left"><input name="rutdocot" type="text"  class="" id="rutdocot" value="<?php  if ($fila['rutdocot'] == 0) {} else {echo formato_rut($fila['rutdocot']);} ?>" size="10" <?php  echo $sw_desact_rut ?>></td>
     </tr>
 
     <tr>
     <td width="21%" align="left">Documento</td>
-    <td width="79%" align="left"><input name="facturadocot" type="text" class="" id="1" value="<? echo $fila['facturadocot']; ?>" size="10" <? echo $sw_desact_rut ?>></td>
+    <td width="79%" align="left"><input name="facturadocot" type="text" class="" id="1" value="<?php  echo $fila['facturadocot']; ?>" size="10" <?php  echo $sw_desact_rut ?>></td>
     </tr>
 
       <tr>
     <td align="left">Estado Gesti&oacute;n</td>
-    <td align="left"><select <? echo $sw_desact_etapa; ?> name='idetapasots'>
-      <?php
+    <td align="left"><select <?php  echo $sw_desact_etapa; ?> name='idetapasots'>
+      <?php 
 	  		
 			$result = mysql_query("SELECT idestadoots, nombreestadoots FROM estadosot ORDER BY nombreestadoots", $link); 
 			$pos = 0;
@@ -353,8 +353,8 @@ if ($accion == 'editar' && $fila_usuario["tipousuario"] == 0)
 
       <tr>
     <td align="left">Estado Distribuci&oacute;n</td>
-    <td align="left"><select <? echo $sw_desact_etapa; ?> name='idestadodist'>
-      <?php
+    <td align="left"><select <?php  echo $sw_desact_etapa; ?> name='idestadodist'>
+      <?php 
 	  		
 			$result = mysql_query("SELECT idestadodist, nombreestadodist FROM estadosdist ORDER BY nombreestadodist", $link); 
 			$pos = 0;
@@ -377,7 +377,7 @@ if ($accion == 'editar' && $fila_usuario["tipousuario"] == 0)
     
     
     </tr>
-    <? if ($accion <> 'editar') 
+    <?php  if ($accion <> 'editar') 
 	{  ?>
     <td align="left">Archivo </td>
     <td align="left"><!--<input type="hidden" name="MAX_FILE_SIZE" value="1000000000" />-->
@@ -386,19 +386,19 @@ if ($accion == 'editar' && $fila_usuario["tipousuario"] == 0)
       <br />
       <!--<input type="submit" value="Enviar">-->
     
-    <? }
+    <?php  }
     else
     {
      ?> 
      
      <td align="left">Archivo </td>
-<td align="left">       <a href="archivos/<? echo $fila['urldocumento']; ?>" target="_blank"> <? echo $fila['urldocumento']; ?> </a> </td>
-  <?  }
+<td align="left">       <a href="archivos/<?php  echo $fila['urldocumento']; ?>" target="_blank"> <?php  echo $fila['urldocumento']; ?> </a> </td>
+  <?php   }
     
      ?>
      </tr>
 
-<?
+<?php 
 
 if ($fila_usuario["tipousuario"] == 0)
 {   
@@ -409,12 +409,12 @@ if ($fila_usuario["tipousuario"] == 0)
     <td align="left" style="vertical-align: top;"><br>Descripci&oacute;n</td>
     <td align="left">
       
-      <? echo $fila['descdocot']; ?>
+      <?php  echo $fila['descdocot']; ?>
       </td>
   </tr>  
      
      
-     <?
+     <?php 
      }
      
      else
@@ -425,11 +425,11 @@ if ($fila_usuario["tipousuario"] == 0)
     <td align="left" style="vertical-align: top;">Descripci&oacute;n</td>
     <td align="left">
       
-      <textarea name="descdocot" cols="45" rows="5" ><? echo $fila['descdocot']; ?></textarea>
+      <textarea name="descdocot" cols="45" rows="5" ><?php  echo $fila['descdocot']; ?></textarea>
       </td>
   </tr>  
      
-     <?
+     <?php 
      }
      ?>
      
@@ -444,20 +444,20 @@ if ($fila_usuario["tipousuario"] == 0)
   <p>&nbsp;</p>
     <p>
       <input type="hidden" name="MM_insert" value="form1">
-      <input type="hidden" name="accionform" value="<? echo $accion ?>">
-              <? $idot = $_GET['idot']; 
+      <input type="hidden" name="accionform" value="<?php  echo $accion ?>">
+              <?php  $idot = $_GET['idot']; 
               //echo "topico". $idot?>
-      <input type="hidden" name="idot" value="<? echo $idot ?>">
-      <input type="hidden" name="idusuario" value="<? echo $idusuario ?>">
-      <input type="hidden" name="id" value="<? echo $id ?>">
+      <input type="hidden" name="idot" value="<?php  echo $idot ?>">
+      <input type="hidden" name="idusuario" value="<?php  echo $idusuario ?>">
+      <input type="hidden" name="id" value="<?php  echo $id ?>">
 
 
-      <input type="hidden" name="idempresanorma" value="<? echo $idempresanorma ?>">
+      <input type="hidden" name="idempresanorma" value="<?php  echo $idempresanorma ?>">
 
 
   </p>
     <p>
-      <?
+      <?php 
     include "include/paginacion.php";
     $consulta = "SELECT * FROM versionesproyectos WHERE idproyecto = $id ORDER BY fecha";
     //include "include/genera_consulta.php"; ?>
@@ -477,4 +477,4 @@ return true;
 </div>
 </body>
 </html>
-<? } ?>
+<?php  } ?>

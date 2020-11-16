@@ -4,11 +4,11 @@
 </head>
 <body>
 
-<?php
+<?php 
 
 require_once('../class.phpmailer.php');
 
-$mail             = new PHPMailer(); // defaults to using php "mail()"
+$mail             = new PHPMailer(); // defaults to using"mail()"
 
 $body             = file_get_contents('contents.html');
 $body             = eregi_replace("[\]",'',$body);

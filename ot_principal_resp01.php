@@ -1,4 +1,4 @@
-<?
+<?php 
 $accion=$_GET['accion'];
 $id=$_GET['id'];
 $borrar_pagina = 0;
@@ -62,8 +62,8 @@ if(mysql_affected_rows()){
 		$fila_max = mysql_fetch_assoc($query_max);
         $max = $fila_max['idot'];
 	echo "Ha sido creada la OT n&uacute;mero: ".$max."<br><br>"; ?>
-    <a href="ot.php?id=<? echo $max; ?>&accion=editar&us=<? echo $idusuario; ?>" rel="gb_page_fs[]">Ingresar documentos</a>
-    <?
+    <a href="ot.php?id=<?php  echo $max; ?>&accion=editar&us=<?php  echo $idusuario; ?>" rel="gb_page_fs[]">Ingresar documentos</a>
+    <?php 
 	//echo $fechainicio." ".$fechatermino;
 	$borrar_pagina = 1;
 	} 
@@ -133,7 +133,7 @@ $(document).ready(function() {
 </script> 
 -->
 
-<? include_once('include/js_editor.php'); ?> 
+<?php  include_once('include/js_editor.php'); ?> 
 
 
 </head>
@@ -142,7 +142,7 @@ $(document).ready(function() {
 <body>
 
 
-<? if ($accion == 'editar') 
+<?php  if ($accion == 'editar') 
 	{ 
 		$id=$_GET['id'];
 		$consulta = mysql_query("SELECT * FROM ots as a, empresas as b WHERE a.idot='$id' AND a.idempresa = b.idempresa", $link) or die(mysql_error());
@@ -155,25 +155,25 @@ $(document).ready(function() {
 <table width="72%" border="0" id="tabla" class="tabla" align="center">
 <tbody>
 
-<?
+<?php 
 if ($accion == 'editar') 
 	{ ?>
           <tr>
     <td width="21%" align="left">Nro. OT</td>
-    <td width="79%" align="left"><input name="nombreot" type="text" class="validate[required]" id="1" value="<? echo $fila['idot']; ?>" size="100" disabled></td>
+    <td width="79%" align="left"><input name="nombreot" type="text" class="validate[required]" id="1" value="<?php  echo $fila['idot']; ?>" size="100" disabled></td>
     </tr>
  
      <tr>
     <td width="21%" align="left">Empresa</td>
-    <td width="79%" align="left"><input name="empresa" type="text" class="validate[required]" id="1" value="<? echo $fila['nombreempresa']; ?>" size="100" disabled></td>
+    <td width="79%" align="left"><input name="empresa" type="text" class="validate[required]" id="1" value="<?php  echo $fila['nombreempresa']; ?>" size="100" disabled></td>
     </tr>
  
       <tr>
     <td width="21%" align="left">Fecha creaci&oacute;n</td>
-    <td width="79%" align="left"><input name="fehacreacionot" type="text" class="validate[required]" id="1" value="<? echo fecha_normal($fila['fechacreacionot']); ?>" size="20" disabled></td>
+    <td width="79%" align="left"><input name="fehacreacionot" type="text" class="validate[required]" id="1" value="<?php  echo fecha_normal($fila['fechacreacionot']); ?>" size="20" disabled></td>
     </tr>
  
-    <?	   
+    <?php 	   
 	}
 
 
@@ -188,8 +188,8 @@ if ($accion == 'agregar')
 
     <tr>
     <td width="21%" align="left">Empresa</td>
-    <td width="79%" align="left"><input name="empresa" type="text" class="validate[required]" id="1" value="<? echo $fila2['nombreempresa']; ?>" size="100" disabled>
-    <input type="hidden" name="idempresa" value="<? echo $fila2['idempresa']; ?>"></td>
+    <td width="79%" align="left"><input name="empresa" type="text" class="validate[required]" id="1" value="<?php  echo $fila2['nombreempresa']; ?>" size="100" disabled>
+    <input type="hidden" name="idempresa" value="<?php  echo $fila2['idempresa']; ?>"></td>
     
     </tr>
 
@@ -197,16 +197,16 @@ if ($accion == 'agregar')
 
       <tr>
     <td width="21%" align="left">Fecha creaci&oacute;n</td>
-    <td width="79%" align="left"><input name="fechacreacionot" type="text" class="validate[required]" id="fechacreacionot" value="<? echo date("d") . "/" . date("m") . "/" . date("Y"); ?>" size="20" disabled></td>
+    <td width="79%" align="left"><input name="fechacreacionot" type="text" class="validate[required]" id="fechacreacionot" value="<?php  echo date("d") . "/" . date("m") . "/" . date("Y"); ?>" size="20" disabled></td>
     </tr>
 
 
 
-    <?	   
+    <?php 	   
 	}
     ?>
 
-<?
+<?php 
 
 		$consulta_usuario = mysql_query("SELECT * FROM usuarios WHERE id='$idusuario'", $link) or die(mysql_error());
 		$fila_usuario = mysql_fetch_assoc($consulta_usuario);
@@ -224,7 +224,7 @@ $sw_desact_etapa = "disabled";
  
   ?>
 
-<?
+<?php 
 if ($accion == 'editar' && $fila_usuario["tipousuario"] == 0)
 {
     $sw_desact_rut = "disabled";
@@ -233,8 +233,8 @@ if ($accion == 'editar' && $fila_usuario["tipousuario"] == 0)
 
       <tr>
     <td align="left">Tiempos de env&iacute;o</td>
-    <td align="left"><select <? echo $sw_desact_rut; ?> name='idtiempoenvio'>
-      <?php
+    <td align="left"><select <?php  echo $sw_desact_rut; ?> name='idtiempoenvio'>
+      <?php 
 	
 	   	       $datos = array("Express","Urgente","24 hrs.","48 hrs.","72 hrs.","4 a 5 d&iacute;as");
 			   $seleccionado = $fila['idtiempoenvio'];
@@ -251,7 +251,7 @@ if ($accion == 'editar' && $fila_usuario["tipousuario"] == 0)
   <tr>
     <td align="left">Estado</td>
     <td align="left"><select name='idetapasots' class="validate[required]">
-      <?php
+      <?php 
 	  		
 			$result = mysql_query("SELECT idestadoots, nombreestadoots FROM estadosot ORDER BY nombreestadoots", $link); 
 			$pos = 0;
@@ -272,7 +272,7 @@ if ($accion == 'editar' && $fila_usuario["tipousuario"] == 0)
     <td align="left" style="vertical-align: top;">Descripci&oacute;n</td>
     <td align="left">
       
-      <textarea name="descot" cols="45" rows="5"><? echo $fila['descot']; ?></textarea>
+      <textarea name="descot" cols="45" rows="5"><?php  echo $fila['descot']; ?></textarea>
       </td>
   </tr>  
   </tbody>
@@ -283,13 +283,13 @@ if ($accion == 'editar' && $fila_usuario["tipousuario"] == 0)
     </p>
     <p>
       <input type="hidden" name="MM_insert" value="form1">
-      <input type="hidden" name="accionform" value="<? echo $accion ?>">
-      <input type="hidden" name="id" value="<? echo $id ?>">
-    <input type="hidden" name="idusuario" value="<? echo $idusuario ?>">
+      <input type="hidden" name="accionform" value="<?php  echo $accion ?>">
+      <input type="hidden" name="id" value="<?php  echo $id ?>">
+    <input type="hidden" name="idusuario" value="<?php  echo $idusuario ?>">
 
 
   </p>
 </form>
 </body>
 </html>
-<? } ?>
+<?php  } ?>

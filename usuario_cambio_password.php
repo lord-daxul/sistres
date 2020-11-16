@@ -1,4 +1,4 @@
-<?
+<?php 
 include ("include/config.php");
 include ("include/conv_fecha.php");
 $login = $_GET['login_portal'];
@@ -95,7 +95,7 @@ $(document).ready(function() {
 
 	</script>
 
-<? include_once('include/js_editor.php'); ?>
+<?php  include_once('include/js_editor.php'); ?>
 <script> 
  
 function seleccionar_todo(){
@@ -125,7 +125,7 @@ function deseleccionar_todo(){
 
 
 <body>
-<?
+<?php 
         $idusuario = $_GET['id'];
         //$idusuario = substr($idusuario,10,4);
         //echo $idusuario;
@@ -156,8 +156,8 @@ function deseleccionar_todo(){
   <table width="600" border="0" align="center">
     <tr>
       <td align="right">Usuario</td>
-      <td align="left"><input type="text" name="login_portal" value="<? echo $login = $fila['login']; ?>" disabled  />
-      <input type="hidden" name="hidlog" value="<? echo $login = $fila['login']; ?>"></td>
+      <td align="left"><input type="text" name="login_portal" value="<?php  echo $login = $fila['login']; ?>" disabled  />
+      <input type="hidden" name="hidlog" value="<?php  echo $login = $fila['login']; ?>"></td>
     </tr>
       <tr>
     <td align="right">Nueva password</td>
@@ -171,12 +171,12 @@ function deseleccionar_todo(){
   <br />
 <input type="submit" value="Enviar" class="boton" />
 <input type="hidden" name="MM_insert" value="form1">
-<input type="hidden" name="idusuario" value="<? echo $idusuario ?>">
+<input type="hidden" name="idusuario" value="<?php  echo $idusuario ?>">
 </form>
 
-<?
+<?php 
 }
 ?>
 
 </body>
-<? } ?>
+<?php  } ?>

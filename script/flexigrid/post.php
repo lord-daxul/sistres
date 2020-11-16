@@ -1,4 +1,4 @@
-<?
+<?php 
 
 function runSQL($rsql) {
 
@@ -60,7 +60,7 @@ header("Last-Modified: " . gmdate( "D, d M Y H:i:s" ) . "GMT" );
 header("Cache-Control: no-cache, must-revalidate" ); 
 header("Pragma: no-cache" );
 header("Content-type: text/xml");
-$xml = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n";
+$xml = "<?php xml version=\"1.0\" encoding=\"utf-8\"?>\n";
 $xml .= "<rows>";
 $xml .= "<page>$page</page>";
 $xml .= "<total>$total</total>";

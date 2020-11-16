@@ -1,4 +1,4 @@
-<?
+<?php 
 $accion=$_GET['accion'];
 $id=$_GET['id'];
 $idempresa=$_GET['idempresa'];
@@ -7,6 +7,7 @@ $idempresa=$_GET['idempresa'];
 <html xmlns="http://www.w3.org/1999/xhtml">
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script src="script/validation/js/jquery.js" type="text/javascript"></script>
 <link rel="stylesheet" type="text/css" href="script/ajaxtabscontent/ajaxtabs/ajaxtabs.css" />
 <script type="text/javascript" src="script/ajaxtabscontent/ajaxtabs/ajaxtabs.js">
@@ -15,11 +16,11 @@ $idempresa=$_GET['idempresa'];
 
 <body>
 <ul id="countrytabs" class="shadetabs">
-<li><a href="estadodist_principal.php?accion=<? echo $accion; ?>&id=<? echo $id; ?>" rel="#iframe" class="selected">Estado de Distribución</a></li>
-<? if ($accion == "editar")
+<li><a href="estadodist_principal.php?accion=<?php  echo $accion; ?>&id=<?php  echo $id; ?>" rel="#iframe" class="selected">Estado de DistribuciÃ³n</a></li>
+<?php  if ($accion == "editar")
 { ?>
 
-<? } ?>
+<?php  } ?>
 </ul>
 
 <div id="countrydivcontainer" style="border:1px solid gray; width:600; height:600; margin-bottom: 1em; padding: 10px">

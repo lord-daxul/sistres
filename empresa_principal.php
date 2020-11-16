@@ -1,4 +1,4 @@
-<?
+<?php 
 ob_start();
 $accion=$_GET['accion'];
 $id=$_GET['id'];
@@ -118,7 +118,7 @@ $(document).ready(function() {
 <body>
 
 
-<? if ($accion == 'editar') 
+<?php  if ($accion == 'editar') 
 	{ 
 		$id=$_GET['id'];
 		$consulta = mysql_query("SELECT * FROM empresas WHERE idempresa='$id'", $link) or die(mysql_error());
@@ -131,11 +131,11 @@ $(document).ready(function() {
 <tbody>
   <tr>
     <td width="36%" align="left">Nombre Empresa</td>
-    <td width="64%" align="left"><input type="text" name="nombreempresa" class="validate[required]" value="<? echo $fila['nombreempresa']; ?>" id="1"></td>
+    <td width="64%" align="left"><input type="text" name="nombreempresa" class="validate[required]" value="<?php  echo $fila['nombreempresa']; ?>" id="1"></td>
   </tr>
   <tr>
     <td align="left">Rut</td>
-    <td align="left"><input type="text" name="rutempresa" class="validate[required]" value="<? echo $fila['rutempresa']; ?>" ></td>
+    <td align="left"><input type="text" name="rutempresa" class="validate[required]" value="<?php  echo $fila['rutempresa']; ?>" ></td>
   </tr>
 
 
@@ -149,12 +149,12 @@ $(document).ready(function() {
     </p>
     <p>
       <input type="hidden" name="MM_insert" value="form1">
-      <input type="hidden" name="accionform" value="<? echo $accion ?>">
-      <input type="hidden" name="id" value="<? echo $id ?>">
+      <input type="hidden" name="accionform" value="<?php  echo $accion ?>">
+      <input type="hidden" name="id" value="<?php  echo $id ?>">
 
 
   </p>
 </form>
 </body>
 </html>
-<? } ?>
+<?php  } ?>

@@ -1,4 +1,4 @@
-<?
+<?php 
 
  $result = mysql_query($consulta, $link); 
  $total_registros = mysql_num_rows($result);
@@ -11,34 +11,34 @@
 
 ?>
 
-<? $cant_campos = mysql_num_fields($result);
+<?php  $cant_campos = mysql_num_fields($result);
 //echo $cant_campos;
 ?>
 <table id="tabla">
 <thead>
 <tr>
-<?
+<?php 
 $nom_campo = 0;
 while ($nom_campo < $cant_campos)
 { ?>
-<td class="spec"><b><? echo mysql_field_name($result, $nom_campo) ?></b></td>
-<? 
+<td class="spec"><b><?php  echo mysql_field_name($result, $nom_campo) ?></b></td>
+<?php  
 $nom_campo = $nom_campo +1;
 } ?>
 </tr>
 </thead>
 <tbody>
-<? while ($row = mysql_fetch_row($result)){ ?>
+<?php  while ($row = mysql_fetch_row($result)){ ?>
 <tr>
-<? 
+<?php  
 $registro = 0;
 while ($registro < $cant_campos)
 { ?>
-<td><? echo $row[$registro]; ?> </td>
-<?
+<td><?php  echo $row[$registro]; ?> </td>
+<?php 
 $registro = $registro +1;
 } ?>
 </tr>
-<? } ?>
+<?php  } ?>
 </tbody>
 </table>

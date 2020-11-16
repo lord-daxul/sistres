@@ -1,4 +1,4 @@
-<?
+<?php 
 $registros = 50;
 $p=$_GET['p'];
 $pagina = $_GET["pagina"];

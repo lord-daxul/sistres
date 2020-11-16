@@ -1,7 +1,7 @@
-<?php
+<?php 
 /*~ class.phpmailer.php
 .---------------------------------------------------------------------------.
-|  Software: PHPMailer - PHP email class                                    |
+|  Software: PHPMailer -email class                                    |
 |   Version: 5.1                                                            |
 |   Contact: via sourceforge.net support pages (also www.worxware.com)      |
 |      Info: http://phpmailer.sourceforge.net                               |
@@ -28,8 +28,8 @@
 */
 
 /**
- * PHPMailer - PHP email transport class
- * NOTE: Requires PHP version 5 or later
+ * PHPMailer -email transport class
+ * NOTE: Requiresversion 5 or later
  * @package PHPMailer
  * @author Andy Prevost
  * @author Marcus Bointon
@@ -38,7 +38,7 @@
  * @license http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License
  */
 
-if (version_compare(PHP_VERSION, '5.0.0', '<') ) exit("Sorry, this version of PHPMailer will only run on PHP version 5 or greater!\n");
+if (version_compare(PHP_VERSION, '5.0.0', '<') ) exit("Sorry, this version of PHPMailer will only run onversion 5 or greater!\n");
 
 class PHPMailer {
 
@@ -139,7 +139,7 @@ class PHPMailer {
 
   /**
    * Path to PHPMailer plugins.  Useful if the SMTP class
-   * is in a different directory than the PHP include path.
+   * is in a different directory than theinclude path.
    * @var string
    */
   public $PluginDir         = '';
@@ -365,7 +365,7 @@ class PHPMailer {
   }
 
   /**
-   * Sets Mailer to send message using PHP mail() function.
+   * Sets Mailer to send message usingmail() function.
    * @return void
    */
   public function IsMail() {
@@ -512,7 +512,7 @@ class PHPMailer {
   /**
    * Check that a string looks roughly like an email address should
    * Static so it can be used without instantiation
-   * Tries to use PHP built-in validator in the filter extension (from PHP 5.2), falls back to a reasonably competent regex validator
+   * Tries to usebuilt-in validator in the filter extension (from5.2), falls back to a reasonably competent regex validator
    * Conforms approximately to RFC2822
    * @link http://www.hexillion.com/samples/#Regex Original pattern found here
    * @param string $address The email address to check
@@ -521,7 +521,7 @@ class PHPMailer {
    * @access public
    */
   public static function ValidateAddress($address) {
-    if (function_exists('filter_var')) { //Introduced in PHP 5.2
+    if (function_exists('filter_var')) { //Introduced in5.2
       if(filter_var($address, FILTER_VALIDATE_EMAIL) === FALSE) {
         return false;
       } else {
@@ -635,7 +635,7 @@ class PHPMailer {
   }
 
   /**
-   * Sends mail using the PHP mail() function.
+   * Sends mail using themail() function.
    * @param string $header The message headers
    * @param string $body The message body
    * @access protected

@@ -1,4 +1,4 @@
-<?
+<?php 
 include ("../encabezado.php");
 ?>
 <html><body>

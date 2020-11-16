@@ -1,4 +1,4 @@
-<?
+<?php 
 $accion=$_GET['accion'];
 $id=$_GET['id'];
 $idempresa=$_GET['idempresa'];
@@ -15,18 +15,18 @@ $idempresa=$_GET['idempresa'];
 
 <body>
 <ul id="countrytabs" class="shadetabs">
-<li><a href="empresa_principal.php?accion=<? echo $accion; ?>&id=<? echo $id; ?>" rel="#iframe" class="selected">Empresa</a></li>
+<li><a href="empresa_principal.php?accion=<?php  echo $accion; ?>&id=<?php  echo $id; ?>" rel="#iframe" class="selected">Empresa</a></li>
 
-<? if ($accion == "editar")
+<?php  if ($accion == "editar")
 { ?>
-<!--<li><a href="empresa_sectores.php?accion=<? echo $accion; ?>&id=<? echo $id; ?>" rel="#iframe" class="selected">Sectores</a></li>
-<li><a href="empresa_logo.php?accion=<? echo $accion; ?>&id=<? echo $id; ?>" rel="#iframe" class="selected">Logo</a></li>
-<li><a href="empresa_encabezados.php?accion=<? echo $accion; ?>&id=<? echo $id; ?>" rel="#iframe" class="selected">Im&aacute;genes Encabezado</a></li>
+<!--<li><a href="empresa_sectores.php?accion=<?php  echo $accion; ?>&id=<?php  echo $id; ?>" rel="#iframe" class="selected">Sectores</a></li>
+<li><a href="empresa_logo.php?accion=<?php  echo $accion; ?>&id=<?php  echo $id; ?>" rel="#iframe" class="selected">Logo</a></li>
+<li><a href="empresa_encabezados.php?accion=<?php  echo $accion; ?>&id=<?php  echo $id; ?>" rel="#iframe" class="selected">Im&aacute;genes Encabezado</a></li>
 
-<li><a href="empresa_contratistas.php?accion=<? echo $accion; ?>&id=<? echo $id; ?>" rel="#iframe" class="selected">Contratistas</a></li>
+<li><a href="empresa_contratistas.php?accion=<?php  echo $accion; ?>&id=<?php  echo $id; ?>" rel="#iframe" class="selected">Contratistas</a></li>
 -->
 
-<? } ?>
+<?php  } ?>
 </ul>
 
 <div id="countrydivcontainer" style="border:1px solid gray; width:600; height:600; margin-bottom: 1em; padding: 10px">

@@ -1,11 +1,11 @@
-<?php
+<?php 
 	$accion=$_GET['accion'];
 
 	if ($multiple != 1)
 	{
 		?>
             <option value="">-- Seleccione --</option>
-		<?php
+		<?php 
 		}
          	      	
       for($i=0; $i<count($datos); $i++)

@@ -1,7 +1,7 @@
-<?php
+<?php 
 /*~ class.pop3.php
 .---------------------------------------------------------------------------.
-|  Software: PHPMailer - PHP email class                                    |
+|  Software: PHPMailer -email class                                    |
 |   Version: 5.1                                                            |
 |   Contact: via sourceforge.net support pages (also www.codeworxtech.com)  |
 |      Info: http://phpmailer.sourceforge.net                               |
@@ -28,8 +28,8 @@
 */
 
 /**
- * PHPMailer - PHP POP Before SMTP Authentication Class
- * NOTE: Designed for use with PHP version 5 and up
+ * PHPMailer -POP Before SMTP Authentication Class
+ * NOTE: Designed for use withversion 5 and up
  * @package PHPMailer
  * @author Andy Prevost
  * @author Marcus Bointon
@@ -201,7 +201,7 @@ class POP3 {
     }
 
     /*
-    On Windows this will raise a PHP Warning error if the hostname doesn't exist.
+    On Windows this will raise aWarning error if the hostname doesn't exist.
     Rather than supress it with @fsockopen, let's capture it cleanly instead
     */
 
@@ -240,7 +240,7 @@ class POP3 {
 
     //  Increase the stream time-out
 
-    //  Check for PHP 4.3.0 or later
+    //  Check for4.3.0 or later
     if (version_compare(phpversion(), '5.0.0', 'ge')) {
       stream_set_timeout($this->pop_conn, $tval, 0);
     } else {
@@ -387,7 +387,7 @@ class POP3 {
   }
 
   /**
-   * Takes over from PHP for the socket warning handler
+   * Takes over fromfor the socket warning handler
    * @access private
    * @param integer $errno
    * @param string $errstr
@@ -396,7 +396,7 @@ class POP3 {
    */
   private function catchWarning ($errno, $errstr, $errfile, $errline) {
     $this->error[] = array(
-      'error' => "Connecting to the POP3 server raised a PHP warning: ",
+      'error' => "Connecting to the POP3 server raised awarning: ",
       'errno' => $errno,
       'errstr' => $errstr
     );

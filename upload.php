@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Ajax File Upload with jQuery and PHP - Demo</title>
+<title>Ajax File Upload with jQuery and- Demo</title>
 <script type="text/javascript" src="script/ajax_file_upload/js/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="script/ajax_file_upload/js/jquery.form.min.js"></script>
 

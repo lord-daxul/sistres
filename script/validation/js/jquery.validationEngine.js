@@ -246,7 +246,7 @@ $.validationEngine = {
 			  	 	},
 			  	 	error: function(data,transport){ $.validationEngine.debug("error in the ajax: "+data.status+" "+transport) },
 					success: function(data){					// GET SUCCESS DATA RETURN JSON
-						data = eval( "("+data+")");				// GET JSON DATA FROM PHP AND PARSE IT
+						data = eval( "("+data+")");				// GET JSON DATA FROMAND PARSE IT
 						ajaxisError = data.jsonValidateReturn[2];
 						customAjaxRule = data.jsonValidateReturn[1];
 						ajaxCaller = $("#"+data.jsonValidateReturn[0])[0];

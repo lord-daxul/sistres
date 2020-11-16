@@ -357,7 +357,7 @@ function updateAction() {
 		h = v + '\n' + h;
 
 	if (f.xml_pi.checked) {
-		s = '<?xml version="1.0"';
+		s = '<?php xml version="1.0"';
 
 		if ((v = getSelectValue(f, 'docencoding')) != '')
 			s += ' encoding="' + v + '"';

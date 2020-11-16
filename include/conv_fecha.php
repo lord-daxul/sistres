@@ -1,4 +1,4 @@
-<?php 
+<?php
 function fecha_normal($dtm_fechainicial){
 
 # ================================================== ========

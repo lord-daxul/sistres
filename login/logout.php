@@ -1,4 +1,4 @@
-<?
+<?php 
 include ("../encabezado.php");
 session_start();
 if(!isset($_SESSION["login"])){
@@ -7,6 +7,6 @@ header("location:login.php");
 session_unset();
 session_destroy();
 echo "<h1>SectorWeb.net</h1>";
-echo "Las variables de sesión han sido eliminadas, y la sesión se ha dado por finalizada correctamente da click <a href=\"login.php\">aqui para loguearte</a>";
+echo "Las variables de sesiï¿½n han sido eliminadas, y la sesiï¿½n se ha dado por finalizada correctamente da click <a href=\"login.php\">aqui para loguearte</a>";
 }
 ?>

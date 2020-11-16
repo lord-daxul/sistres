@@ -1,4 +1,4 @@
-<?
+<?php 
 ob_start();
 $accion=$_GET['accion'];
 $id=$_GET['id'];
@@ -135,7 +135,7 @@ $(document).ready(function() {
 
 <body>
 
-<? if ($accion == 'editar') 
+<?php  if ($accion == 'editar') 
 	{ 
 		$id=$_GET['id'];
 		$consulta = mysql_query("SELECT * FROM usuarios WHERE usuarios.id='$id'", $link) or die(mysql_error());
@@ -148,10 +148,10 @@ $(document).ready(function() {
 <tbody>
   <tr>
     <td width="36%" align="left">Usuario</td>
-    <td width="64%" align="left"><input type="text" name="login" class="validate[required]" value="<? echo $fila['login']; ?>" id="1"></td>
+    <td width="64%" align="left"><input type="text" name="login" class="validate[required]" value="<?php  echo $fila['login']; ?>" id="1"></td>
   </tr>
   
-  <? 
+  <?php  
   if ($accion == 'agregar') 
 	{ 
   ?>
@@ -163,32 +163,32 @@ $(document).ready(function() {
     <td align="left">Confirmar password</td>
     <td align="left"><input type="password" name="pass2" class="confirm[pass1]" ></td>
   </tr>
-  <? 
+  <?php  
   }
   ?>
   <tr>
     <td align="left">Nombres</td>
-    <td align="left"><input type="text" name="nombre" class="validate[required]" value="<? echo $fila['nombre']; ?>" ></td>
+    <td align="left"><input type="text" name="nombre" class="validate[required]" value="<?php  echo $fila['nombre']; ?>" ></td>
   </tr>
   <tr>
     <td align="left">Apellidos</td>
-    <td align="left"><input type="text" name="apaterno" class="validate[required]"  value="<? echo $fila['apaterno']; ?>"></td>
+    <td align="left"><input type="text" name="apaterno" class="validate[required]"  value="<?php  echo $fila['apaterno']; ?>"></td>
   </tr>
   <tr>
     <td align="left">E-mail</td>
-    <td align="left"><input type="text" name="email" class="validate[required,email]" value="<? echo $fila['email']; ?>"></td>
+    <td align="left"><input type="text" name="email" class="validate[required,email]" value="<?php  echo $fila['email']; ?>"></td>
   </tr>
 <!--   <tr>
     <td align="left">Contrato</td>
-    <td align="left"><input type="text" name="contrato" value="<? echo $fila['contrato']; ?>"></td>
+    <td align="left"><input type="text" name="contrato" value="<?php  echo $fila['contrato']; ?>"></td>
   </tr>
   <tr>
     <td align="left">Fecha inicio</td>
-    <td align="left"><input type="text" name="fecha1" id="fecha1" class="validate[required]" value="<? echo fecha_normal($fila['fechainicio']); ?>" ></td>
+    <td align="left"><input type="text" name="fecha1" id="fecha1" class="validate[required]" value="<?php  echo fecha_normal($fila['fechainicio']); ?>" ></td>
   </tr>
   <tr>
     <td align="left">Fecha t&eacute;rmino</td>
-    <td align="left"><input type="text" name="fecha2" id="fecha2" class="validate[required]" value="<? echo fecha_normal($fila['fechatermino']); ?>" ></td>
+    <td align="left"><input type="text" name="fecha2" id="fecha2" class="validate[required]" value="<?php  echo fecha_normal($fila['fechatermino']); ?>" ></td>
   </tr>
   
   -->
@@ -196,7 +196,7 @@ $(document).ready(function() {
     <td align="left">Tipo usuario</td>
     <td align="left">
       <select name='tipousuario' class="validate[required]">
-	  <?php
+	  <?php 
 	   	       $datos = array("Usuario","Supervisor","Administrador");
 			   $seleccionado = $fila['tipousuario'];
 			   include('include/combobox.php');
@@ -207,7 +207,7 @@ $(document).ready(function() {
 <!--  <tr>
     <td align="left">Visibilidad</td>
     <td align="left"><select name='visibilidad' class="validate[required]">
-      <?php
+      <?php 
 	   	       $datos = array("Filial","Empresa","Todo");
 			   $seleccionado = $fila['visibilidad'];
 			   include('include/combobox.php');
@@ -223,8 +223,8 @@ $(document).ready(function() {
     </p>
     <p>
       <input type="hidden" name="MM_insert" value="form1">
-      <input type="hidden" name="accionform" value="<? echo $accion ?>">
-      <input type="hidden" name="id" value="<? echo $id ?>">
+      <input type="hidden" name="accionform" value="<?php  echo $accion ?>">
+      <input type="hidden" name="id" value="<?php  echo $id ?>">
 
 
   </p>
@@ -232,4 +232,4 @@ $(document).ready(function() {
 </div>
 </body>
 </html>
-<? } ?>
+<?php  } ?>

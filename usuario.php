@@ -1,4 +1,4 @@
-<?
+<?php 
 $accion=$_GET['accion'];
 $id=$_GET['id'];
 $idempresa=$_GET['idempresa'];
@@ -15,12 +15,12 @@ $idempresa=$_GET['idempresa'];
 
 <body>
 <ul id="countrytabs" class="shadetabs">
-<li><a href="usuario_principal.php?accion=<? echo $accion; ?>&id=<? echo $id; ?>" rel="#iframe" class="selected">Usuario</a></li>
-<? if ($accion == "editar")
+<li><a href="usuario_principal.php?accion=<?php  echo $accion; ?>&id=<?php  echo $id; ?>" rel="#iframe" class="selected">Usuario</a></li>
+<?php  if ($accion == "editar")
 { ?>
-<li><a href="usuario_empresas.php?accion=editar&id=<? echo $id ?>&idempresa=<? echo $idempresa ?>" rel="#iframe">Empresas</a></li>
-<li><a href="usuario_cambio_password.php?accion=editar&id=<? echo $id ?>&idempresa=<? echo $idempresa ?>" rel="#iframe">Cambio password</a></li>
-<? } ?>
+<li><a href="usuario_empresas.php?accion=editar&id=<?php  echo $id ?>&idempresa=<?php  echo $idempresa ?>" rel="#iframe">Empresas</a></li>
+<li><a href="usuario_cambio_password.php?accion=editar&id=<?php  echo $id ?>&idempresa=<?php  echo $idempresa ?>" rel="#iframe">Cambio password</a></li>
+<?php  } ?>
 </ul>
 
 <div id="countrydivcontainer" style="border:1px solid gray; width:600; height:600; margin-bottom: 1em; padding: 10px">

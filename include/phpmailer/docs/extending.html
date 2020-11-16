@@ -27,8 +27,8 @@ $mail->Mailer   = "smtp";
 
 @MYSQL_CONNECT("localhost","root","password");
 @mysql_select_db("my_company");
-$query  = "SELECT full_name, email, photo FROM employee WHERE id=$id";
-$result = @MYSQL_QUERY($query);
+$queryï¿½ =ï¿½"SELECT full_name, email,ï¿½photoï¿½FROM employeeï¿½WHEREï¿½id=$id";
+$resultï¿½=ï¿½@MYSQL_QUERY($query);
 
 while ($row = mysql_fetch_array ($result))
 {
@@ -111,9 +111,9 @@ class my_phpmailer extends phpmailer {
 </table>
 <br>
 
-Now here's a normal PHP page in the site, which will have all the defaults set
+Now here's a normalpage in the site, which will have all the defaults set
 above:<br>
-Normal PHP file: <b>mail_test.php</b>
+Normalfile: <b>mail_test.php</b>
 <p>
 
 <table cellpadding="4" border="1" width="80%">

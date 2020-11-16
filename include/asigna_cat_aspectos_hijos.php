@@ -1,4 +1,4 @@
-<? 
+<?php  
 //include ("include/config.php");
 
 $txt_aspectos = "

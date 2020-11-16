@@ -1,4 +1,4 @@
-<?
+<?php 
 
  $result = mysql_query($consulta, $link); 
  $total_registros = mysql_num_rows($result);

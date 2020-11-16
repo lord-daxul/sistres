@@ -1,4 +1,4 @@
-<?
+<?php 
 $accion=$_GET['accion'];
 $id=$_GET['id'];
 $idempresa=$_GET['idempresa'];
@@ -179,7 +179,7 @@ $(document).ready(function() {
 
 <body>
 
-<? if ($accion == 'editar') 
+<?php  if ($accion == 'editar') 
 	{ 
 		$id=$_GET['id'];
 		$consulta = mysql_query("SELECT a.*, b.nombreempresa FROM usuarios as a, empresas as b WHERE a.id='$id' AND a.idempresa = b.idempresa", $link) or die(mysql_error());
@@ -208,22 +208,22 @@ $(document).ready(function() {
     <td width="19%" align="left" style="vertical-align: top;">Empresas</td>
     <td width="81%" align="left">
    
-   <? if ($tipousuario == 1 || $tipousuario == 2)
+   <?php  if ($tipousuario == 1 || $tipousuario == 2)
    {  ?>
     
      <select multiple="multiple" name="idfiliales[]"  >  
     
     
-    <? } 
+    <?php  } 
     
     else
     
     {  ?>
         <select name="idfiliales[]"  >  
-    <? }    ?>
+    <?php  }    ?>
     
        
-	<?php
+	<?php 
 			$result = mysql_query("
 			SELECT idempresa, nombreempresa
 			FROM empresas
@@ -258,9 +258,9 @@ $(document).ready(function() {
     </p>
     <p>
       <input type="hidden" name="MM_insert" value="form1">
-      <input type="hidden" name="accionform" value="<? echo $accion ?>">
-      <input type="hidden" name="id" value="<? echo $id ?>">
-      <input type="hidden" name="idempresausuario" value="<? echo $idempresausuario ?>">
+      <input type="hidden" name="accionform" value="<?php  echo $accion ?>">
+      <input type="hidden" name="id" value="<?php  echo $id ?>">
+      <input type="hidden" name="idempresausuario" value="<?php  echo $idempresausuario ?>">
 
 
   </p>
@@ -268,4 +268,4 @@ $(document).ready(function() {
 </div>
 </body>
 </html>
-<? } ?>
+<?php  } ?>

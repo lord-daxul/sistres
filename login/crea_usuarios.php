@@ -1,4 +1,4 @@
-<?
+<?php 
 // modificacion de codigo Xombra (www.xombra.com) 21/03/2009 para sectorweb.net
 include("config.php"); /*Traemos el archivo config*/
 /*Recibimos las variables por el metodo POST*/

@@ -1,4 +1,4 @@
-<?php
+<?php 
  $to = "hdomingueza@gmail.com";
  $subject = "Asunto";
  $body = "Hola,\n\nEsto es una prueba";

@@ -1,4 +1,4 @@
-<?
+<?php 
 //$server="localhost"; /* Nuestro server mysql */
 //$database="marketan_sisdoc"; /* Nuestra base de datos */
 //$dbpass="Jesucristo2013"; /*Nuestro password mysql */
@@ -17,7 +17,7 @@ function Conectarse()
       echo "Error conectando a la base de datos.";
       exit();
    }
-   if (!mysql_select_db("marketan_sisdoc",$link))
+   if (!mysql_select_db("marketan_sistres",$link))
    {
       echo "Error seleccionando la base de datos.";
       exit();

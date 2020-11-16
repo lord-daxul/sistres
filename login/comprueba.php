@@ -1,12 +1,20 @@
-<?php
+<?php 
 ob_start();
 session_start();
 echo '<link href="estilos.css" type="text/css" rel="stylesheet">';
+echo "algo";
 // modificacion de codigo Xombra (www.xombra.com) 21/03/2009 para sectorweb.net
-    include("config.php");
+    //include("config.php");
+    
+$server="localhost"; /* Nuestro server mysql */
+$database="marketan_sistres"; /* Nuestra base de datos */
+$dbpass=""; /*Nuestro password mysql */
+$dbuser="root"; /* Nuestro user mysql */
+    
     $login = htmlspecialchars(trim($_POST['login']));
     $pass = sha1(md5(trim($_POST['pass']))); // encriptamos en MD5 para despues comprar (Modificado)
     // $query="SELECT * FROM usuarios WHERE login='$login'"; Antes
+    echo $login . ":" . $pass . PHP_EOL;
 	$link=mysql_connect($server,$dbuser,$dbpass);
  
     $query = sprintf("SELECT usuarios.login,
@@ -29,14 +37,12 @@ echo '<link href="estilos.css" type="text/css" rel="stylesheet">';
          $_SESSION["nombre"]=$array["nombre"];
          $_SESSION["apaterno"]=$array["apaterno"];
          $_SESSION["amaterno"]=$array["amaterno"];
-		 $_SESSION["email"]=$array["email"]; // Agrgado Nuevo
-		 $_SESSION["tipousuario"]=$array["tipousuario"]; // Agrgado Nuevo
+		     $_SESSION["email"]=$array["email"]; // Agrgado Nuevo
+		     $_SESSION["tipousuario"]=$array["tipousuario"]; // Agrgado Nuevo
          $_SESSION["idusuario"]=$array["id"]; // Agrgado Nuevo
         
          header("Location:../index.php?p=inicio");
        }  else {
-		   header("Location:../error.php");
-		 //echo "Usuario o password incorrectos.";  // Ahora
-      } 
-       
-?>
+		  // header("Location:../error.php");
+		 echo "Usuario o password incorrectos.";  // Ahora
+      }

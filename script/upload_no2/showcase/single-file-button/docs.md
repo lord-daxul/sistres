@@ -1,6 +1,6 @@
 ### What happens?
 
-The PHP script does not save the files but [logs](../script.log) every request. Check the Firebug console for event debugging logs.
+Thescript does not save the files but [logs](../script.log) every request. Check the Firebug console for event debugging logs.
 
 1. Select an image smaller than 2 Mb.
 	* If the file is too big, the uploader gives you a warning.

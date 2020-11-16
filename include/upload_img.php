@@ -1,4 +1,4 @@
-<? 
+<?php  
 //tomo el valor de un elemento de tipo texto del formulario 
 //$cadenatexto = $_POST["cadenatexto"]; 
 //echo "Escribió en el campo de texto: " . $cadenatexto . "<br><br>"; 

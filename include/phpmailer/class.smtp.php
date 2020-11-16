@@ -1,7 +1,7 @@
-<?php
+<?php 
 /*~ class.smtp.php
 .---------------------------------------------------------------------------.
-|  Software: PHPMailer - PHP email class                                    |
+|  Software: PHPMailer -email class                                    |
 |   Version: 5.1                                                            |
 |   Contact: via sourceforge.net support pages (also www.codeworxtech.com)  |
 |      Info: http://phpmailer.sourceforge.net                               |
@@ -28,8 +28,8 @@
 */
 
 /**
- * PHPMailer - PHP SMTP email transport class
- * NOTE: Designed for use with PHP version 5 and up
+ * PHPMailer -SMTP email transport class
+ * NOTE: Designed for use withversion 5 and up
  * @package PHPMailer
  * @author Andy Prevost
  * @author Marcus Bointon

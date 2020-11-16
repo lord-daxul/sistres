@@ -1,4 +1,4 @@
-<? 
+<?php  
 
 $idfilial = $_GET['idfilial'];
 
@@ -31,7 +31,7 @@ include "include/genera_consulta.php";
  
 <script language="JavaScript">
 function confirmar(url){
-if (!confirm("¿Está seguro de que desea eliminar el registro?")) {
+if (!confirm("ï¿½Estï¿½ seguro de que desea eliminar el registro?")) {
 return false;
 }
 else {
@@ -74,25 +74,25 @@ return true;
 		  <th><b>Proceso</b></td>
           <th>Nombre largo          
           <th><b>Proceso Padre</b></td>
-          <th><b>Posición</b></td>
+          <th><b>Posiciï¿½n</b></td>
           <th><b>Nivel</b></td>
           <th>Acciones</td>
 		</tr>
 	</thead>
 	<tbody>
-		<? while ($row = mysql_fetch_array($result)){ ?>
+		<?php  while ($row = mysql_fetch_array($result)){ ?>
 		<tr>
 		  <td align="left">
-		  <a href="proceso.php?id=<? echo $row['idactividad']; ?>&accion=editar" rel="gb_page_fs[]">
-		  <? if($row['nivel_proc'] == 1 ) { echo "<strong>";} else { echo "&nbsp;&nbsp;&nbsp;&nbsp;"; }  
+		  <a href="proceso.php?id=<?php  echo $row['idactividad']; ?>&accion=editar" rel="gb_page_fs[]">
+		  <?php  if($row['nivel_proc'] == 1 ) { echo "<strong>";} else { echo "&nbsp;&nbsp;&nbsp;&nbsp;"; }  
 		  echo $row['nombre_proc'];
           if($row['nivel_proc'] == 1 ) { echo "<strong>";}
 		  ?>
 		  </a>
           </td>
-		  <td align="left"><? if($row['nivel_proc'] == 1 ) { echo "<strong>";} else { echo "&nbsp;&nbsp;&nbsp;&nbsp;"; }
+		  <td align="left"><?php  if($row['nivel_proc'] == 1 ) { echo "<strong>";} else { echo "&nbsp;&nbsp;&nbsp;&nbsp;"; }
 		  echo $row['nombre_largo_proc']; if($row['nivel_proc'] == 1 ) { echo "<strong>";}?></td>
-		  <td align="left"><?
+		  <td align="left"><?php 
 		$idprocpadre = $row['idactpadre_proc'];
 		 if( $row['nivel_proc'] == 1)
 				  {
@@ -102,17 +102,17 @@ return true;
 		$fila = mysql_fetch_assoc($consulta);
 
 		  echo $fila['nombre_proc']; ?></td>
-		  <td align="center"><? echo $row['posicion_proc']; ?></td>
-		  <td align="center"><? echo $row['nivel_proc']; ?></td>
-		  <td align="center"><a href="proceso.php?id=<? echo $row['idactividad']; ?>&accion=editar" rel="gb_page_fs[]">Editar</a> &nbsp;<a href="javascript:;" onclick="confirmar('proceso_principal.php?id=<? echo $row['idactividad']; ?>&accion=eliminar&url=<? echo $_SERVER['REQUEST_URI'] ?>'); return false;">Eliminar</a></td>
+		  <td align="center"><?php  echo $row['posicion_proc']; ?></td>
+		  <td align="center"><?php  echo $row['nivel_proc']; ?></td>
+		  <td align="center"><a href="proceso.php?id=<?php  echo $row['idactividad']; ?>&accion=editar" rel="gb_page_fs[]">Editar</a> &nbsp;<a href="javascript:;" onclick="confirmar('proceso_principal.php?id=<?php  echo $row['idactividad']; ?>&accion=eliminar&url=<?php  echo $_SERVER['REQUEST_URI'] ?>'); return false;">Eliminar</a></td>
 		</tr>
-		<? } ?>
+		<?php  } ?>
 
         
 	</tbody>
 </table>
 <div align="center">
-<? 
+<?php  
 include "include/muestra_paginacion.php"; 
  
 
@@ -127,7 +127,7 @@ echo " <a href='" . $_SERVER['REQUEST_URI'] . "&filtro=0'> Ocultar filtro</a>"; 
 	});
 </script>
 
-<? } else {
+<?php  } else {
 	
 	echo " <a href='" . $_SERVER['REQUEST_URI'] . "&filtro=1'> Mostrar filtro</a>";
 
@@ -136,9 +136,9 @@ echo " <a href='" . $_SERVER['REQUEST_URI'] . "&filtro=0'> Ocultar filtro</a>"; 
 ?>
  
 <br />
-<? if ($_SESSION["tipousuario"] == 1)
+<?php  if ($_SESSION["tipousuario"] == 1)
 { ?>
 <a href="proceso.php?accion=agregar" title="Agregar" rel="gb_page_fs[]"><br />
 Agregar nuevo</a>
-<? } ?>
+<?php  } ?>
  </div>

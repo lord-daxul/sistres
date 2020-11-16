@@ -1,8 +1,8 @@
-<?php require_once('../../Connections/fotolog_felipefbs.php'); ?>
-<?php 
+<?phprequire_once('../../Connections/fotolog_felipefbs.php'); ?>
+<?php
 require_once("../../lang/linguagens.php");
 require_once('../../biblioteca/felipefbs.fotolog.php'); ?>
-<?php
+<?php 
 if (!isset($_SESSION)) {
   session_start();
 }
@@ -83,7 +83,7 @@ Puedes escribirnos en caso de que tengas un problema o quieras enviarnos sugeren
 		<img src="img/loading.gif" alt="Loading..." title="Sending Email" /></strong>
 	</p>	
 	<p id="emailSuccess" style="display:none;">
-		<strong style="color:green;">Su e-mail ha sido enviado con éxito.</strong>
+		<strong style="color:green;">Su e-mail ha sido enviado con ï¿½xito.</strong>
 	</p>
 	<div id="contactFormArea">
 		<form action="scripts/contact.php" method="post" id="cForm">
@@ -97,7 +97,7 @@ Puedes escribirnos en caso de que tengas un problema o quieras enviarnos sugeren
 			<br />
 		    <br />
 <label for="posRegard">Fotolog:</label>
-				<input type="text" size="25" name="posRegard" id="posRegard" value="<? echo $_SESSION['MM_Username'] ?>" disabled="disabled" />
+				<input type="text" size="25" name="posRegard" id="posRegard" value="<?php  echo $_SESSION['MM_Username'] ?>" disabled="disabled" />
 			<br />
 		    <br />
 <label for="posText">Mensaje:</label>

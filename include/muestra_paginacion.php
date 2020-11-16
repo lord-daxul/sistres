@@ -1,4 +1,4 @@
-<? 
+<?php  
  if ($ver!='todos')
  {
 

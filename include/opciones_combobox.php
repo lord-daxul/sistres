@@ -1,4 +1,4 @@
-      <?php
+      <?php 
 	  
 	  function opciones_combobox($datos,$seleccionado)
 	  {

@@ -1,12 +1,10 @@
-<?
-
+<?php 
 session_start();
 if(isset($SESSION)){
-header("location:index.php?p=usuario.php"); /* Si ha iniciado la sesion, vamos a user.php */
+  header("location:index.php?p=usuario.php"); /* Si ha iniciado la sesion, vamos a user.php */
 } else { 
 
-
-/* Cerramos la parte de codigo PHP porque vamos a escribir bastante HTML y nos será mas cómodo así que metiendo echo's */
+/* Cerramos la parte de codigoporque vamos a escribir bastante HTML y nos serï¿½ mas cï¿½modo asï¿½ que metiendo echo's */
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -34,6 +32,6 @@ header("location:index.php?p=usuario.php"); /* Si ha iniciado la sesion, vamos a
 <input type="submit" value="Entrar" class="boton" />
 </form>
 </body></html>
-<?
+<?php 
 } /* Y cerramos el else */ 
 ?>

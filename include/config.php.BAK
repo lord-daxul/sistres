@@ -1,4 +1,4 @@
-<?
+<?php 
 //$server="localhost"; /* Nuestro server mysql */
 //$database="sistema_normas"; /* Nuestra base de datos */
 //$dbpass="centro2005"; /*Nuestro password mysql */
@@ -26,7 +26,7 @@ function Conectarse()
 } 
 
 $link=Conectarse(); 
-//echo "Conexión con la base de datos conseguida.<br>"; 
+//echo "Conexiï¿½n con la base de datos conseguida.<br>"; 
 
 //mysql_close($link); //cierra la conexion 
 

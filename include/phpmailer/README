@@ -77,7 +77,7 @@ A quick note on E_STRICT:
   date.timezone = America/New York
   directive, (for your own server timezone)
 - If you do get this error, and are unable to access your php.ini file, there is
-  a workaround. In your PHP script, add
+  a workaround. In yourscript, add
   date_default_timezone_set('America/Toronto');
 
   * do NOT try to use
@@ -135,7 +135,7 @@ Class Features:
 
 Why you might need it:
 
-Many PHP developers utilize email in their code.  The only PHP function
+Manydevelopers utilize email in their code.  The onlyfunction
 that supports this is the mail() function.  However, it does not expose
 any of the popular features that many email clients use nowadays like
 HTML-based emails and attachments. There are two proprietary
@@ -144,7 +144,7 @@ easy to use classes: AspEmail(tm) and AspMail.  Both of these
 programs are COM components only available on Windows.  They are also a
 little pricey for smaller projects.
 
-Since I do Linux development I�ve missed these tools for my PHP coding.
+Since I do Linux development I�ve missed these tools for mycoding.
 So I built a version myself that implements the same methods (object
 calls) that the Windows-based components do. It is open source and the
 LGPL license allows you to place the class in your proprietary PHP
@@ -160,7 +160,7 @@ phpmailer.lang-en.php.  If you look right before the .php extension
 that there are two letters.  These represent the language type of the
 translation file.  For instance "en" is the English file and "br" is
 the Portuguese file.  Chose the file that best fits with your language
-and place it in the PHP include path.  If your language is English
+and place it in theinclude path.  If your language is English
 then you have nothing more to do.  If it is a different language then
 you must point PHPMailer to the correct translation.  To do this, call
 the PHPMailer SetLanguage method like so:

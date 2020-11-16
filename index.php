@@ -99,7 +99,7 @@ echo 'P';
 <ul id='nav'>
 
   <li><a href='index.php?p=inicio'>Inicio</a></li>
-<?phpif ($_SESSION["tipousuario"] == 2)
+<?php if ($_SESSION["tipousuario"] == 2)
       { ?>
   <li><a href='#'>Administraci&oacute;n</a>
     <ul>
@@ -143,7 +143,7 @@ echo 'P';
        }
    }
   
-
+  }
 
 mysql_close($link); 
 ?>

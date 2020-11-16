@@ -43,6 +43,6 @@ $dbuser="root"; /* Nuestro user mysql */
         
          header("Location:../index.php?p=inicio");
        }  else {
-		  // header("Location:../error.php");
-		 echo "Usuario o password incorrectos.";  // Ahora
+		   header("Location:../error.php");
+		// echo "Usuario o password incorrectos.";  // Ahora
       }

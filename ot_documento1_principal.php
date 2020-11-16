@@ -175,6 +175,7 @@ if ($borrar_pagina == 0) { ?>
 <link type="text/css" href="script/calendar/css/redmond/jquery-ui-1.7.2.custom.css" rel="Stylesheet" />	
 <script type="text/javascript" src="script/calendar/js/jquery-1.3.2.min.js"></script>
 <script type="text/javascript" src="script/calendar/js/jquery-ui-1.7.2.custom.min.js"></script>
+
 <script type="text/javascript"> 
 	$(function() {
 		$("#fecha1").datepicker({changeYear: true});

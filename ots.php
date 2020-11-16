@@ -20,7 +20,7 @@ else
  
 <script language="JavaScript">
 function confirmar(url){
-if (!confirm("�Est� seguro de que desea eliminar el registro?")) {
+if (!confirm("¿Este seguro de que desea eliminar el registro?")) {
 return false;
 }
 else {
@@ -61,7 +61,7 @@ if ($_SESSION["tipousuario"] == 0)
 	<tbody>
 		<?php  while ($row = mysql_fetch_array($result)){ ?>
 		<tr>
-		  <td align="center"><a href="ot.php?id=<?php  echo $row['idot']; ?>&accion=editar&us=<?php  echo $idusuario; ?>" rel="gb_page_fs[]" title="Orden de Trabajo Nro<?php  echo $row['idot']; ?><?php echo $row['idot']; ?></a></td>
+		  <td align="center"><a href="ot.php?id=<?php  echo $row['idot']; ?>&accion=editar&us=<?php  echo $idusuario; ?>" rel="gb_page_fs[]" title="Orden de Trabajo Nro<?php  echo $row['idot']; ?>"><?php  echo $row['idot']; ?></a></td>
           <td align="center"><?php  echo $row['nombreempresa']; ?></td>
 		  <td align="center"><?php  echo $row['login']; ?></td>
           <td align="center"><?php  echo fecha_normal($row['fechacreacionot']); ?></td>

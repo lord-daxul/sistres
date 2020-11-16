@@ -14,11 +14,11 @@ if ($_SESSION["tipousuario"] == 0 || $_SESSION["tipousuario"] == 1 || $_SESSION[
 {
 include("include/config.php");
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE HTML>
+<html>
 <head>
-<!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
---><!--<META HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=ISO-8859-1">-->
+<meta charset="utf-8">
+<!--<META HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=ISO-8859-1">-->
 <title>Sistema de Documentos</title>
 <link href="estilos.css" type="text/css" rel="stylesheet">
 
@@ -75,7 +75,7 @@ html .jqueryslidemenu{height: 1%;} /*Holly Hack for IE7 and below*/
 
 
 
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /><style type="text/css">
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /><style type="text/css"> -->
 <!--
 body {
 	margin-left: 1px;

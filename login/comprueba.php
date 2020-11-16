@@ -6,10 +6,7 @@ echo "algo";
 // modificacion de codigo Xombra (www.xombra.com) 21/03/2009 para sectorweb.net
     //include("config.php");
     
-$server="localhost"; /* Nuestro server mysql */
-$database="marketan_sistres"; /* Nuestra base de datos */
-$dbpass=""; /*Nuestro password mysql */
-$dbuser="root"; /* Nuestro user mysql */
+    include("config.php");
     
     $login = htmlspecialchars(trim($_POST['login']));
     $pass = sha1(md5(trim($_POST['pass']))); // encriptamos en MD5 para despues comprar (Modificado)

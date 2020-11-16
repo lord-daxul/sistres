@@ -94,6 +94,7 @@ if ((isset($_POST["accionform"])) && ($_POST["accionform"] == "editar")) {
 if ($borrar_pagina == 0)
  {
 ?>
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -101,7 +102,13 @@ if ($borrar_pagina == 0)
 --><title>Documento sin título</title>
 <link href="estilos.css" type="text/css" rel="stylesheet">
 <!-- <script type='text/javascript' src='script/menu/src/assets/jquery.js'></script> -->
-<link type="text/css" href="script/calendar/css/redmond/jquery-ui-1.7.2.custom.css" rel="Stylesheet" />	
+<!--<link type="text/css" href="script/calendar/css/redmond/jquery-ui-1.7.2.custom.css" rel="Stylesheet" />	-->
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/base/jquery-ui.css">
+    
 <link rel="stylesheet" href="script/validation/css/validationEngine.jquery.css" type="text/css" media="screen" charset="utf-8" />
 <!--<script type="text/javascript" src="script/editor/nicEdit.js"></script> 
 <script type="text/javascript"> 
@@ -267,8 +274,8 @@ if ($accion == 'editar' && $fila_usuario["tipousuario"] == 0)
   </p>
 </form>
 </body>
-<script type="text/javascript" src="script/calendar/js/jquery-1.3.2.min.js"></script> 
-<script type="text/javascript" src="script/calendar/js/jquery-ui-1.7.2.custom.min.js"></script>
+<!--<script type="text/javascript" src="script/calendar/js/jquery-1.3.2.min.js"></script> 
+<script type="text/javascript" src="script/calendar/js/jquery-ui-1.7.2.custom.min.js"></script>-->
 <script type="text/javascript"> 
 	$(document).ready(function() {
 		$("#fecha1").datepicker({changeYear: true});
@@ -280,7 +287,7 @@ if ($accion == 'editar' && $fila_usuario["tipousuario"] == 0)
 
 	});
   </script> 
-  <script src="script/validation/js/jquery.js" type="text/javascript"></script>
+  <!--<script src="script/validation/js/jquery.js" type="text/javascript"></script> -->
 <script src="script/validation/js/jquery.validationEngine-en.js" type="text/javascript"></script>
 <script src="script/validation/js/jquery.validationEngine.js" type="text/javascript"></script>
 <script type="text/javascript"> 

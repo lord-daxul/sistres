@@ -15,7 +15,7 @@ $idempresa=$_GET['idempresa'];
 
 <body>
 <ul id="countrytabs" class="shadetabs">
-<li><a href="estadoot_principal.php?accion=<?php  echo $accion; ?>&id=<?php  echo $id; ?>" rel="#iframe" class="selected">Estado de Gesti�n</a></li>
+<li><a href="estadoot_principal.php?accion=<?php  echo $accion; ?>&id=<?php  echo $id; ?>" rel="#iframe" class="selected">Estado de Gestión</a></li>
 <?php  if ($accion == "editar")
 { ?>
 

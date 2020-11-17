@@ -32,7 +32,7 @@ $nombre_archivo = str_replace("Ñ","N",$nombre_archivo);
 $nombre_archivo = str_replace(" ","_",$nombre_archivo);
 
 
-$upload_dir = $_SERVER['DOCUMENT_ROOT'] . "/sisdoc/archivos/";
+$upload_dir = $_SERVER['DOCUMENT_ROOT'] . "/sistres/archivos/";
 //echo $upload_dir."<br>";    
 if (file_exists($upload_dir)) {
     //echo 'Existe <br>.';

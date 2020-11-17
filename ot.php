@@ -1,41 +1,41 @@
-<?php 
-$accion=$_GET['accion'];
-$id=$_GET['id'];
-$idempresa=$_GET['idempresa'];
-$us=$_GET['us'];
+<?php
+$accion = $_GET['accion'];
+$id = $_GET['id'];
+$idempresa = $_GET['idempresa'];
+$us = $_GET['us'];
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE HTML>
 <html>
+
 <head>
-<script src="script/validation/js/jquery.js" type="text/javascript"></script>
-<link rel="stylesheet" type="text/css" href="script/ajaxtabscontent/ajaxtabs/ajaxtabs.css" />
-<script type="text/javascript" src="script/ajaxtabscontent/ajaxtabs/ajaxtabs.js">
-</script>
+    <script src="script/validation/js/jquery.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="script/ajaxtabscontent/ajaxtabs/ajaxtabs.css" />
+    <script type="text/javascript" src="script/ajaxtabscontent/ajaxtabs/ajaxtabs.js">
+    </script>
 </head>
 
 <body>
-<ul id="countrytabs" class="shadetabs">
-<li><a href="ot_principal.php?accion=<?php  echo $accion; ?>&id=<?php  echo $id; ?>&us=<?php  echo $us; ?>" rel="#iframe" class="selected">Orden de Trabajo</a></li>
-<?php  if ($accion == "editar")
-{ ?>
+    <ul id="countrytabs" class="shadetabs">
+        <li><a href="ot_principal.php?accion=<?php echo $accion; ?>&id=<?php echo $id; ?>&us=<?php echo $us; ?>" rel="#iframe" class="selected">Orden de Trabajo</a></li>
+        <?php if ($accion == "editar") { ?>
 
-<li><a href="ot_documentos1.php?accion=<?php  echo $accion; ?>&amp;id=<?php  echo $id; ?>&us=<?php  echo $us; ?>" rel="#iframe" class="selected">Documentos</a></li>
-<!--
-<li><a href="permiso_respuestas.php?accion=<?php  echo $accion; ?>&amp;id=<?php  echo $id; ?>" rel="#iframe" class="selected">Respuestas</a></li>
+            <li><a href="ot_documentos1.php?accion=<?php echo $accion; ?>&amp;id=<?php echo $id; ?>&us=<?php echo $us; ?>" rel="#iframe" class="selected">Documentos</a></li>
+            <!--
+<li><a href="permiso_respuestas.php?accion=<?php echo $accion; ?>&amp;id=<?php echo $id; ?>" rel="#iframe" class="selected">Respuestas</a></li>
 -->
-<?php  } ?>
-</ul>
+        <?php  } ?>
+    </ul>
 
-<div id="countrydivcontainer" style="border:1px solid gray; width:600; height:600; margin-bottom: 1em; padding: 10px">
+    <div id="countrydivcontainer" style="border:1px solid gray; width:600; height:600; margin-bottom: 1em; padding: 10px">
 
-<script type="text/javascript">
-var countries=new ddajaxtabs("countrytabs", "countrydivcontainer")
-countries.setpersist(false)
-countries.setselectedClassTarget("link") //"link" or "linkparent"
-countries.init()
-</script>
+        <script type="text/javascript">
+            var countries = new ddajaxtabs("countrytabs", "countrydivcontainer")
+            countries.setpersist(false)
+            countries.setselectedClassTarget("link") //"link" or "linkparent"
+            countries.init()
+        </script>
 
 
 </body>
+
 </html>

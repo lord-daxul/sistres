@@ -7,7 +7,7 @@
  
 <script language="JavaScript">
 function confirmar(url){
-if (!confirm("�Est� seguro de que desea eliminar el registro?")) {
+if (!confirm("¿Esta seguro de que desea eliminar el registro?")) {
 return false;
 }
 else {
@@ -20,7 +20,7 @@ return true;
 <table width="500" align="center" class="tabla" id="tabla">
 	<thead>
 		<tr>
-		  <th width="151"><b>Estados de gesti�n</b><th width="150">Acciones</td>
+		  <th width="151"><b>Estados de gestión</b><th width="150">Acciones</td>
 		</tr>
 	</thead>
 	<tbody>

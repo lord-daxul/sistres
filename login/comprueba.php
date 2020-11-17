@@ -2,10 +2,8 @@
 ob_start();
 session_start();
 echo '<link href="estilos.css" type="text/css" rel="stylesheet">';
-echo "algo";
 // modificacion de codigo Xombra (www.xombra.com) 21/03/2009 para sectorweb.net
-    //include("config.php");
-    
+  
     include("config.php");
     
     $login = htmlspecialchars(trim($_POST['login']));

@@ -18,10 +18,8 @@ include("include/config.php");
 <html>
 <head>
 <meta charset="utf-8">
-<!--<META HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=ISO-8859-1">-->
-<title>Sistema de Documentos</title>
+<title></title>
 <link href="estilos.css" type="text/css" rel="stylesheet">
-
 <script type="text/javascript">
     var GB_ROOT_DIR = "http://localhost/sistres/script/greybox/";
 </script>
@@ -31,8 +29,8 @@ include("include/config.php");
 <link href="script/greybox/gb_styles.css" rel="stylesheet" type="text/css" />
 
 
-	  <script type='text/javascript' src='script/menu/src/assets/jquery.js'></script>
-<!--    <link rel="stylesheet" href="....script/menu/src/assets/project-page.css" type="text/css" />
+<!--	  <script type='text/javascript' src='script/menu/src/assets/jquery.js'></script>
+    <link rel="stylesheet" href="....script/menu/src/assets/project-page.css" type="text/css" />
 -->    
     <!-- per Project stuff -->
 <!--      
@@ -53,7 +51,10 @@ html .jqueryslidemenu{height: 1%;} /*Holly Hack for IE7 and below*/
 </style>
 <![endif]-->
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script> -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/base/jquery-ui.css">  
 <script type="text/javascript" src="script/menu2/jqueryslidemenu.js"></script>
 
 
@@ -90,9 +91,9 @@ body {
 <?php 
 
 
-//session_start();
+session_start();
 if(!isset($_SESSION["login"])){
-echo 'P';
+//echo 'P';
 } else { ?>
 
 <div id="myslidemenu" class="jqueryslidemenu">

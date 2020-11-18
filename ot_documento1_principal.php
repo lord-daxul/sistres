@@ -25,6 +25,8 @@ $facturadocot = $_POST['facturadocot'];
 $idtiempoenvio = $_POST['idtiempoenvio'];
 $idestadodist = $_POST['idestadodist'];
 
+//echo $horadoc;
+
 
 if ($idetapasots == '') {
   $idetapasots = 0;
@@ -65,6 +67,7 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
 
   if ((isset($_POST["accionform"])) && ($_POST["accionform"] == "agregar")) {
     $idproyecto = $_POST['idproyecto'];
+    $horadoc = $_POST['horadoc'];
     include 'include/upload.php';
 
     $query = "INSERT INTO otsdocumentos (
@@ -73,10 +76,11 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
     rutdocot,
     facturadocot,
     idestadodist,
-    idestadoot
+    idestadoot,
+    horadoc
     ) 
     VALUES 
-    (" . $idot . ",'" . $nombre_archivo . "','" . $rutdocot . "','" . $facturadocot . "','" . $idestadodist . "','" . $idetapasots . "');";
+    (" . $idot . ",'" . $nombre_archivo . "','" . $rutdocot . "','" . $facturadocot . "','" . $idestadodist . "','" . $idetapasots . "','" . $horadoc . "');";
     //echo $query;
     $result = mysql_db_query($database, $query, $link);
 
@@ -175,6 +179,7 @@ if ($borrar_pagina == 0) { ?>
       }
 
       #progress-div {
+        display:none;
         border: #4e76b3 1px solid;
         padding: 0px 0px;
         margin: 30px 0px;
@@ -186,7 +191,7 @@ if ($borrar_pagina == 0) { ?>
         padding-top: 5px;
         font-size: medium;
         font-weight: bold;
-        text-align:center;
+        text-align: center;
         vertical-align: middle;
         height: 30px;
       }
@@ -378,7 +383,11 @@ if ($borrar_pagina == 0) { ?>
 
 
         <input type="hidden" name="idempresanorma" value="<?php echo $idempresanorma ?>">
-
+        <input type="hidden" name="horadoc" value="<?php if ($fila['horadoc'] == 0) {
+                                                      echo date('Y-m-d H:i:s');
+                                                    } else {
+                                                      echo $fila['horadoc'];
+                                                    } ?>" />
 
       </p>
       <p>
@@ -507,17 +516,26 @@ if ($borrar_pagina == 0) { ?>
     </script>
     <script src="script/wow-alert/js/wow-alert.js" type="text/javascript"></script>
     <!--display bar only if file is chosen-->
-    <script src="http://malsup.github.com/jquery.form.js"></script>
+    <script src="script/upload/jquery.form.js"></script>
     <script>
       $(function() {
+        var status = $('#status');
+        
+        $('input[type = "file"]').click(function() {
+          $('#progress-div').show();
+        });
 
-          $('#form1').ajaxForm({
+        $('#form1').ajaxForm({
           beforeSend: function() {
+
             $("#progress-bar").width('0%');
+
           },
           uploadProgress: function(event, position, total, percentComplete) {
-            $("#progress-bar").width(percentComplete + '%');
-            $("#progress-bar").html('<div id="progress-status">' + percentComplete + ' %</div>')
+            
+              $("#progress-bar").width(percentComplete + '%');
+              $("#progress-bar").html('<div id="progress-status">' + percentComplete + ' %</div>')
+            
           },
           complete: function(xhr) {
             status.html(xhr.responseText);

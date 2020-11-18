@@ -157,6 +157,7 @@ if ($borrar_pagina == 0) {
 					<th>Estado Gesti&oacute;n</th>
 					<th>Estado Distribuci&oacute;n</th>
 					<th>Rut</th>
+					<th>Fecha</th>
 					<th>Documento</th>
 					<th>Archivo</th>
 					<th>Acciones
@@ -173,6 +174,7 @@ if ($borrar_pagina == 0) {
 											} else {
 												echo formato_rut($row['rutdocot']);
 											} ?></td>
+						<td align="center"><?php echo $row['horadoc']; ?></td>					
 						<td align="center"><?php echo $row['facturadocot']; ?></td>
 						<td align="center">
 							<a href="archivos/<?php echo $row['urldocumento']; ?>" target="_blank"> <?php echo $row['urldocumento']; ?> </a>
